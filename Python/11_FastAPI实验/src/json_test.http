@@ -1,0 +1,11 @@
+@host = http://127.0.0.1:8888
+
+POST {{host}}/items HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Foo",
+  "description": "An optional description",
+  "price": 45.2,
+  "tax": 3.5
+}

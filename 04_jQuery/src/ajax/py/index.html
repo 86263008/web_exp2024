@@ -1,0 +1,55 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajax示例</title>
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <script src="public/jquery-3.6.1.min.js">
+  </script>
+  <script>
+    $(document).ready(function () {
+      $("#add").click(function () {
+        const a = parseFloat($("#a").val());
+        const b = parseFloat($("#b").val());
+        if (!isNaN(a) && !isNaN(b)) {
+          $.ajax({
+            type: "POST",
+            url: "/add",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ a: a, b: b }),
+            success: function (res, status) {
+              $("#a_b").val(res);
+            },
+            error: function (message) {
+              $("#a_b").val(message);
+            }
+          })
+        }
+      });
+
+      $("#minus").click(function () {
+        const a = parseFloat($("#a").val());
+        const b = parseFloat($("#b").val());
+        if (!isNaN(a) && !isNaN(b)) {
+          $.get("/minus", { a: a, b: b }, function (res, status) {
+            $("#a_b").val(res);
+          })
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <span>a：</span>
+  <input id="a" type="text" />
+  <span>b：</span>
+  <input id="b" type="text" />
+  <button id="add">a+b</button>
+  <button id="minus">a-b</button>
+  <input id="a_b" type="text" />
+</body>
+
+</html>

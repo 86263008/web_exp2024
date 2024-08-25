@@ -1,0 +1,7 @@
+@host = http://127.0.0.1:8888
+
+### 测试正确参数123
+GET {{host}}/items/123 HTTP/1.1
+
+### 测试错误参数
+GET {{host}}/items/abc HTTP/1.1

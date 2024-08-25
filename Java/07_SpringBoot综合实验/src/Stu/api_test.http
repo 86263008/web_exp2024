@@ -1,0 +1,146 @@
+
+# --8<-- [start:add]
+###
+POST http://localhost:8080/demo/Student/add HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "no": "99999",
+  "name": "X102",
+  "gender": "X103",
+  "age": 104,
+  "dept": "X105"
+}
+# --8<-- [end:add]
+
+# --8<-- [start:delete]
+###
+POST http://localhost:8080/demo/Student/delete HTTP/1.1
+content-type: application/json
+
+["1", "2"]
+
+# --8<-- [end:delete]
+
+# --8<-- [start:update]
+###
+POST http://localhost:8080/demo/Student/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "no": "X101",
+  "name": "X102",
+  "gender": "X103",
+  "age": 104,
+  "dept": "X105"
+}
+# --8<-- [end:update]
+
+# --8<-- [start:getPage]
+###
+POST http://localhost:8080/demo/Student/getPage HTTP/1.1
+content-type: application/json
+
+{
+    "pageNum": 1,
+    "pageSize": 5
+}
+# --8<-- [end:getPage]
+
+# --8<-- [start:add]
+###
+POST http://localhost:8080/Stu/demo/Course/add HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "no": "X101",
+  "name": "X102",
+  "preNo": "X103",
+  "credit": 3.3
+}
+# --8<-- [end:add]
+
+# --8<-- [start:delete]
+###
+POST http://localhost:8080/Stu/demo/Course/delete HTTP/1.1
+content-type: application/json
+
+["1", "2"]
+
+# --8<-- [end:delete]
+
+# --8<-- [start:update]
+###
+POST http://localhost:8080/Stu/demo/Course/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "no": "X101",
+  "name": "X102",
+  "preNo": "X103",
+  "credit": 3.3
+}
+# --8<-- [end:update]
+
+# --8<-- [start:getPage]
+###
+POST http://localhost:8080/Stu/demo/Course/getPage HTTP/1.1
+content-type: application/json
+
+{
+    "pageNum": 1,
+    "pageSize": 5
+}
+# --8<-- [end:getPage]
+
+# --8<-- [start:add]
+###
+POST http://localhost:8080/Stu/demo/StuCourse/add HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "courseNo": "X101",
+  "stuNo": "X102",
+  "grade": 3.3
+}
+# --8<-- [end:add]
+
+# --8<-- [start:delete]
+###
+POST http://localhost:8080/Stu/demo/StuCourse/delete HTTP/1.1
+content-type: application/json
+
+["1", "2"]
+
+# --8<-- [end:delete]
+
+# --8<-- [start:update]
+###
+POST http://localhost:8080/Stu/demo/StuCourse/update HTTP/1.1
+content-type: application/json
+
+{
+  "id": "X100",
+  "courseNo": "X101",
+  "stuNo": "X102",
+  "grade": 3.3
+}
+# --8<-- [end:update]
+
+# --8<-- [start:getPage]
+###
+POST http://localhost:8080/Stu/demo/StuCourse/getPage HTTP/1.1
+content-type: application/json
+
+{
+    "pageNum": 1,
+    "pageSize": 5
+}
+# --8<-- [end:getPage]
+
+

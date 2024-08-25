@@ -1,0 +1,9 @@
+
+### 测量408状态
+GET http://localhost:8080/BuiltInTest/ResponseStatus408.jsp HTTP/1.1
+
+### 测量200状态
+GET http://localhost:8080/BuiltInTest/ResponseStatus200.jsp HTTP/1.1
+
+### 测量500状态
+GET http://localhost:8080/BuiltInTest/ResponseStatus500.jsp HTTP/1.1

@@ -1,0 +1,46 @@
+<!--request.html-->
+<html>
+
+<body>
+  <!-- 超链接-->
+  <a href="http://127.0.0.1:8080" target="_blank">纯粹的链接</a><br>
+  <a href="http://127.0.0.1:8080/?name=ok&password=good" target="_blank">带参数的链接</a><br>
+  <a href="http://127.0.0.1:8080/?name=o k&password=goo d" target="_blank">带空格的链接</a><br>
+  
+  <!--GET表单-->
+  <form name="GET表单" action="http://127.0.0.1:8080" method="GET" target="_blank">
+    <input type="text" name="name" value="ok"/>
+    <input type="password" name="password" value="good"/>
+    <input type="submit" value="提交"/>
+  </form>
+
+  <!--POST表单-->
+  <form name="POST表单" action="http://127.0.0.1:8080" method="POST" target="_blank">
+    <input type="text" name="name" value="ok"/>
+    <input type="password" name="password" value="good"/>
+    <input type="submit" value="提交"/>
+  </form>
+
+  <!--JS修改location-->
+  <script>
+    function jsonPack(){
+      var form = document.forms["JSON表单"];
+      var data = {
+        name: form["name"].value, 
+        password: form["password"].value
+      };
+
+      form["all"].value = JSON.stringify(data);
+    }
+  </script>
+
+  <!--POST表单-->
+  <form name="JSON表单" action="http://127.0.0.1:8080" method="POST" target="_blank" onsubmit="jsonPack()">
+    <input type="hidden" name="all"/>
+    <input type="text" name="name" value="ok"/>
+    <input type="password" name="password" value="good"/>
+    <input type="submit" value="提交"/>
+  </form>
+</body>
+
+</html>

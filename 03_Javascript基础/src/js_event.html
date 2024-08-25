@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Element Event Binding Example</title>
+
+  <script>
+    // 定义事件处理函数  
+    function handleClick() {
+      var message = document.getElementById('message');
+      message.textContent = '你点击了按钮！';
+    }
+
+    function handleMouseDown() {
+      var button = document.getElementById('myButton');
+      button.classList.add('active');
+      var message = document.getElementById('message');
+      message.textContent = '鼠标按下了按钮！';
+    }
+
+    function handleMouseUp() {
+      var button = document.getElementById('myButton');
+      button.classList.remove('active');
+      var message = document.getElementById('message');
+      message.textContent = '鼠标松开了按钮！';
+    }
+
+    function handleMouseOver() {
+      var button = document.getElementById('myButton');
+      button.classList.add('active');
+      var message = document.getElementById('message');
+      message.textContent = '鼠标悬停在按钮上！';
+    }
+
+    function handleMouseOut() {
+      var button = document.getElementById('myButton');
+      button.classList.remove('active');
+      var message = document.getElementById('message');
+      message.textContent = '鼠标离开了按钮！';
+    }
+
+    function handleFocus() {
+      var input = document.getElementById('myInput');
+      input.style.borderColor = 'blue'; // 当输入框获得焦点时，改变边框颜色  
+      var message = document.getElementById('message');
+      message.textContent = '输入框获得了焦点！';
+    }
+
+    function handleBlur() {
+      var input = document.getElementById('myInput');
+      input.style.borderColor = ''; // 当输入框失去焦点时，移除边框颜色  
+      var message = document.getElementById('message');
+      message.textContent = '输入框失去了焦点！';
+    }  
+  </script>
+</head>
+
+<body>
+  <button id="myButton" onmousedown="handleMouseDown()" onmouseup="handleMouseUp()" onmouseover="handleMouseOver()"
+    onmouseout="handleMouseOut()" onclick="handleClick()">点击我</button>
+
+  <input type="text" id="myInput" placeholder="输入文本" onfocus="handleFocus()" onblur="handleBlur()">
+  <p id="message">你还没有进行任何操作。</p>
+</body>
+
+</html>
