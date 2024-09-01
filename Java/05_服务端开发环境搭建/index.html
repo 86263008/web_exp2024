@@ -715,7 +715,7 @@
 <p>Windows 7，JDK 8u311，Tomcat 9.0.54，STS4，<code>Microsoft Edge/Chrome/Firefox</code>等浏览器</p>
 <h2 id="5">5 实验步骤</h2>
 <h3 id="jdk">安装JDK</h3>
-<p>为服务器安装Java运行环境，JDK使用比较成熟的版本，步骤如下：</p>
+<p>为服务器安装Java运行环境，JDK使用比较成熟的版本（<a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html</a>），步骤如下：</p>
 <ol>
 <li>
 <p>按默认配置安装<code>jdk-8u311-windows-x64.exe</code></p>
@@ -723,8 +723,8 @@
 <li>
 <p>为Java增加<code>环境变量</code>；在<code>开始/设置/控制面板/系统/高级/环境变量/系统变量</code>中新建两个环境变量：</p>
 <blockquote>
-<p><strong>JAVA_HOME</strong>:$JAVA_HOME</p>
-<p><strong>JRE_HOME</strong>:$JAVA_HOME\jre</p>
+<p><strong>JAVA_HOME</strong>:{JAVA_HOME}</p>
+<p><strong>JRE_HOME</strong>:{JAVA_HOME}\jre</p>
 </blockquote>
 </li>
 <li>
@@ -737,7 +737,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>java<span class="w"> </span>–version
 </code></pre></div>
 <h3 id="tomcat">安装Tomcat</h3>
-<p>安装Tomcat服务器。Windows下有两种方式：安装包、压缩包，本实验选择压缩包，步骤如下：</p>
+<p>安装Tomcat服务器。在官网（<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a>）下载安装包。Windows下有两种方式：安装包、压缩包，本实验选择压缩包，步骤如下：</p>
 <ol>
 <li>
 <p>安装（解压）<code>apache-tomcat-9.0.71-windows-x64.zip</code>到目录<code>C:/App/Tomcat 9.0</code></p>
@@ -753,7 +753,7 @@
 </li>
 </ol>
 <h3 id="sts-4">安装STS 4</h3>
-<p>安装集成开发环境STS4，官网最新版本的安装包中不包含对JSP工程的支持，本实验中压缩包在官网版本基础上安装了JSP工程插件的压缩包，具体步骤如下：</p>
+<p>安装集成开发环境STS4，在官网（<a href="https://spring.io/tools">https://spring.io/tools</a>）下载适合本地电脑的版本，以Spring Tools 4 for Eclipse Windows X86_64为例，具体步骤如下：</p>
 <ol>
 <li>
 <p>安装（解压）<code>sts-4.17.2.RELEASE.zip</code>到目录<code>C:/App/Sts4</code></p>
@@ -761,12 +761,21 @@
 <li>
 <p>启动<code>SpringToolSuite4.exe</code>，确认软件能正常运行</p>
 </li>
+<li>
+<p>打开菜单<code>Help/Install New Software...</code>，在<strong>Work with</strong>:输入<code>Juno - http://download.eclipse.org/releases/juno</code>，在下方组件中选择<strong>Web, XML, Java EE and OSGi Enterprise Development</strong>，并在下一级组件中勾选以下组件：</p>
+<ol class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Java EE Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Java Web Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Web Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse XML Editors and Tools</li>
+</ol>
+</li>
 </ol>
 <h3 id="jsp">创建JSP测试工程</h3>
 <p>创建一个JSP工程，在页面中使用Java代码输出问候字符串，步骤如下：</p>
 <ol>
 <li>
-<p>创建工作目录：<code>C:/${学号}</code></p>
+<p>创建工作目录：<code>C:/{学号}</code></p>
 <blockquote>
 <p>后续文件均存放在工作目录</p>
 </blockquote>
