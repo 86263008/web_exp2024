@@ -24,7 +24,7 @@ public class StudentDeleteServlet extends HttpServlet {
     Result res = _StudentService.delete(request.getParameter("no"));
     response.setCharacterEncoding("utf-8");
     response.setContentType("application/json");
-    response.getWriter().append(String.format("{\"code\":%d, \"message\":\"%s\"}", res.code, res.message));
+    response.getWriter().append(String.format("{\"code\":%d, \"message\":\"%s\", \"data\":\"%s\"}", res.code, res.message, res.data));
   }
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) 

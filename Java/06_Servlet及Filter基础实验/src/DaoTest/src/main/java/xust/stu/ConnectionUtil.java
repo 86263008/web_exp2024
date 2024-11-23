@@ -17,7 +17,8 @@ public class ConnectionUtil {
 
     try {
       Class.forName("org.sqlite.JDBC");
-      res = DriverManager.getConnection("jdbc:sqlite:stu.db");
+      //在数据库文件stu.db存入在D盘下
+      res = DriverManager.getConnection("jdbc:sqlite:d:/stu.db");
     } catch (Exception e) {
       System.err.println(e.getClass().getName() + ": " + e.getMessage());
       System.exit(0);

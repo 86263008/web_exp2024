@@ -5,8 +5,7 @@
 POST http://localhost:8080/{{app}}/demo/Student/Add HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-id=1
-&no=X2
+no=X2
 &name=X2
 &gender=X2
 &age=2
@@ -18,7 +17,7 @@ id=1
 POST http://localhost:8080/{{app}}/demo/Student/Delete HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-no=X1
+no=X2
 //--8<-- [end:delete]
 
 //--8<-- [start:update]
@@ -26,12 +25,11 @@ no=X1
 POST http://localhost:8080/{{app}}/demo/Student/Update HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-id=1
-&no=X2
-&name=X2
-&gender=X2
-&age=2
-&dept=X2
+no=X2
+&name=3
+&gender=3
+&age=3
+&dept=3
 //--8<-- [end:update]
 
 //--8<-- [start:get]
@@ -39,5 +37,5 @@ id=1
 POST http://localhost:8080/{{app}}/demo/Student/Get HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-no=X1
+no=X2
 //--8<-- [end:get]

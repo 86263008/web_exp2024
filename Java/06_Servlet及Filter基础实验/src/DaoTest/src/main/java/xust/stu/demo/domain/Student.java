@@ -76,6 +76,9 @@ public class Student{
   //--8<-- [end:dept]
 
 	@Override
+	/**
+	 * 将对象序列化为JSON字符串
+	 */
 	public String toString() {
     return "{" + "\"no\": " + "\"" + no + "\"" + ", " + "\"name\": " + "\"" + name + "\"" + ", " + "\"gender\": " + "\"" + gender + "\"" + ", " + "\"age\": " + age + ", " + "\"dept\": " + "\"" + dept + "\"" +  "}";
 	}

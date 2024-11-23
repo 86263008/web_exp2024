@@ -108,9 +108,11 @@ public class StudentDaoImpl implements StudentDao{
       try {
         stmt = con.prepareStatement(sql);
         toR(o, stmt);
-        if(stmt.executeUpdate() > 0){
-          res.code = 0;
+        int row_effected = stmt.executeUpdate();
+        if(row_effected > 0) {
+        	res.code = 0;
         }
+        res.data = row_effected;
       } catch (Exception e) {
         res.message = e.getMessage();
         e.printStackTrace();
@@ -137,7 +139,11 @@ public class StudentDaoImpl implements StudentDao{
         
         stmt = con.prepareStatement(sql);
         stmt.setString(1, no);
-        res.code = 0;
+        int row_effected = stmt.executeUpdate();
+        if(row_effected > 0) {
+        	res.code = 0;
+        }
+        res.data = row_effected;
       } catch (Exception e) {
         res.message = e.getMessage();
         e.printStackTrace();
@@ -165,9 +171,11 @@ public class StudentDaoImpl implements StudentDao{
         stmt = con.prepareStatement(sql);
         toR(o, stmt);
         stmt.setString(6, o.getNo());
-        if(stmt.executeUpdate() > 0){
-          res.code = 0;
+        int row_effected = stmt.executeUpdate();
+        if(row_effected > 0) {
+        	res.code = 0;
         }
+        res.data = row_effected;
       } catch (Exception e) {
         e.printStackTrace();
         res.message = e.getMessage();
