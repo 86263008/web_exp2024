@@ -1,2 +1,0 @@
-### Request local html page
-GET http://localhost:8000/static/greeting.html HTTP/1.1

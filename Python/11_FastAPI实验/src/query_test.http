@@ -1,3 +1,0 @@
-@host = http://127.0.0.1:8888
-
-GET {{host}}/items/?skip=0&limit=10 HTTP/1.1
