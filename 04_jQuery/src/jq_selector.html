@@ -1,0 +1,31 @@
+<!-- selector.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>选择器示例</title>
+  <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+  <h1>元素选择器</h1>
+  <p id="p1" class="my_class" style="background-color: green;">这是一个段落。</p>
+
+  <button onclick="$('p').show()">显示段落</button>
+  <button onclick="$('p').hide()">隐藏段落</button>
+
+  <h1>#id选择器</h1>
+  <button onclick="$('#p1').show()">显示段落1</button>
+  <button onclick="$('#p1').hide()">隐藏段落1</button>
+
+  <h1>.class选择器</h1>
+  <button onclick="$('.my_class').show()">显示段落my_class</button>
+  <button onclick="$('.my_class').hide()">隐藏段落my_class</button>
+
+  <h1>CSS选择器</h1>
+  <button onclick="$('p').css('background-color', 'red')">修改段落背景为红色</button>
+  <button onclick="$('p').css('background-color', 'blue')">修改段落背景为蓝色</button>
+</body>
+
+</html>

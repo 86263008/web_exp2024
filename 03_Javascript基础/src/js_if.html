@@ -1,0 +1,12 @@
+<script language="javascript">
+  var curday = new Date();
+  hours = curday.getHours();
+  document.write("现在是：" + hours + "点，");
+  if (hours <= 12) {
+    document.write("<font color='00ff00'>早上好！</font>");
+  } else if (hours <= 18) {
+    document.write("<font color='ffff00'>中午好！</font>");
+  } else {
+    document.write("<font color='000000'>晚上好！</font>");
+  }
+</script>

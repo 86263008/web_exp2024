@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>条件语句</title>
+  <script src="vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="yao">摇</button>
+    <p>{{rnd}}</p>
+    <p v-if="rnd >= 0.5">这把是大</p>
+    <p v-else>这把是小</p>
+  </div>
+
+  <script>
+    const vm = Vue.createApp({
+      data() {
+        return {
+          rnd: 0
+        }
+      },
+      methods: {
+        yao(event) {
+          this.rnd = Math.random();
+        }
+      }
+    }
+    );
+
+    vm.mount('#app');
+  </script>
+</body>
+
+</html>

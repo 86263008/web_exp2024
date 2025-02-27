@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>学生表</title>
+  <script>
+    function validateForm() {
+      var no = document.forms["studentForm"]["no"].value;
+
+      if (no == "") {
+        alert("学号不能为空");
+        return false;
+      }
+
+      //完成后续校验
+    }  
+  </script>
+</head>
+
+<body>
+  <h3>学生表</h3>
+  <div class="container">
+    <form name="studentForm" onsubmit="return validateForm()" action="#">
+      <div>
+        <label for="no">学号:</label>
+        <input type="text" id="no" name="no" placeholder="请输入学号..">
+      </div>
+
+      <!-- 完整代码参考html部分实验 -->      
+      <button type="submit">提交</button>
+    </form>
+  </div>
+</body>
+
+</html>

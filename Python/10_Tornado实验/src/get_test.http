@@ -1,0 +1,4 @@
+@host = http://127.0.0.1:8888
+
+### test /
+GET {{host}}/?name=andy&age=14  HTTP/1.1

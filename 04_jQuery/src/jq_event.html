@@ -1,0 +1,50 @@
+<!-- event.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>事件示例</title>
+  <script src="jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $action_docment = $("#action_docment")
+      $("#p1").click(function () {
+        $("#action_mouse").text("click事件");
+      });
+      $("#k1").keypress(function () {
+        $("#action_key").text("keypress事件");
+      });
+      $("#f1").submit(function () {
+        $("#action_form").text("submit事件");
+        return false;
+      });
+      $(window).resize(function () {
+        $("#action_docment").text("resize事件")
+      })
+    });
+  </script>
+</head>
+
+<body>
+
+  <h1>鼠标事件</h1>
+  <span>当前动作：</span><span id="action_mouse"></span>
+  <p id="p1">这是一个段落。</p>
+
+  <h1>键盘事件</h1>
+  <span>当前动作：</span><span id="action_key"></span>
+  <p><input id="k1" type="text"></input></p>
+
+  <h1>表单事件</h1>
+  <span>当前动作：</span><span id="action_form"></span>
+  <form id="f1">
+    <input type="text"></input>
+    <input type="submit"></input>
+  </form>
+
+  <h1>文档/窗口事件</h1>
+  <span>当前动作：</span><span id="action_docment"></span>
+</body>
+
+</html>

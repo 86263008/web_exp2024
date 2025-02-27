@@ -1,0 +1,1452 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../00_%E7%8E%AF%E5%A2%83%E5%BB%BA%E7%AB%8B/Java/index.html">
+      
+      
+        <link rel="next" href="../../01_Html%E5%9F%BA%E7%A1%80/index.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>1.2 后端境搭建 - 基于WEB的应用程序开发-实验指导书</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="基于WEB的应用程序开发-实验指导书" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发-实验指导书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            基于WEB的应用程序开发-实验指导书
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.2 后端境搭建
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="基于WEB的应用程序开发-实验指导书" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发-实验指导书" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    基于WEB的应用程序开发-实验指导书
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1. 实验环境搭建
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. 实验环境搭建
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00_%E7%8E%AF%E5%A2%83%E5%BB%BA%E7%AB%8B/Java/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 前端环境搭建
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1.2 后端境搭建
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1.2 后端境搭建
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 实验类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 实验目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 实验环境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 实验步骤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 实验步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openjdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装OpenJDK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装Tomcat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sts-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装STS 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sts4" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改STS4依赖仓库地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建JSP测试工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#springboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建SpringBoot测试工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST Client测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展练习
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_Html%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2 Html基础实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_CSS%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3 CSS基础实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Javascript%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    04 Javascript基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_Javascript%E9%AB%98%E7%BA%A7%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 Javascript高级实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_jQuery/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 jQuery
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_Bootstrap/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Bootstrap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_Vue.js%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Vue.js
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_JSP%E7%9A%84%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    05 JSP的隐含对象实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Servlet%E5%8F%8AFilter%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 Servlet及Filter基础实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_SpringBoot%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    07 Spring Boot综合实验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label=" ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+       
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1 实验类型
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2 实验目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 实验要求
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4 实验环境
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 实验步骤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 实验步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建目录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openjdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装OpenJDK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装Tomcat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sts-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      安装STS 4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sts4" class="md-nav__link">
+    <span class="md-ellipsis">
+      修改STS4依赖仓库地址
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建JSP测试工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#springboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建SpringBoot测试工程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rest-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      REST Client测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      拓展练习
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">服务端开发环境搭建</h1>
+<h2 id="1">1 实验类型</h2>
+<p>验证型，2学时，必选实验</p>
+<h2 id="2">2 实验目的</h2>
+<p>掌握JSP运行环境的安装与配置；掌握STS4中Tomcat注册过程；掌握JSP页面的部署及调试过程；掌握SpringBoot项目的创建及运行；掌握浏览器调试页面的方法；掌握REST Client测试网络接口的方法</p>
+<h2 id="3">3 实验要求</h2>
+<p>验证参考代码；修改参考代码，实现自己的设计；将关键结果截图及源代码整理成实验报告</p>
+<h2 id="4">4 实验环境</h2>
+<p>Windows 7 64、Open JDK 23+、Tomcat 11+、Spring Tools 4(STS4)、Visual Studio Code(VS Code)、Microsoft Edge/Chrome/Firefox等浏览器</p>
+<h2 id="5">5 实验步骤</h2>
+<h3 id="_2">创建目录</h3>
+<ol>
+<li>
+<p><strong>创建软件目录</strong></p>
+<p>为便于管理可将各工具软件安装到同一目录下，如：<code>C:\app</code></p>
+</li>
+</ol>
+<h3 id="openjdk">安装OpenJDK</h3>
+<p>浏览官方网站(<a href="https://openjdk.org/">https://openjdk.org/</a>)，了解项目基本情况，安装预编译版本，步骤如下：</p>
+<ol>
+<li>
+<p><strong>下载OpenJDK</strong></p>
+<ul>
+<li>
+<p>访问OpenJDK官方网站：<a href="https://jdk.java.net/23/">https://jdk.java.net/23/</a></p>
+</li>
+<li>
+<p>选择适合本机操作系统的二进制压缩包，例如Windows 64位版本的.zip文件</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>解压OpenJDK压缩包</strong></p>
+<p>将下载的压缩包解压到安装目录，例如<code>C:\app\jdk-23.0.1</code>。</p>
+</li>
+<li>
+<p><strong>配置环境变量</strong></p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>变量值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JAVA_HOME</td>
+<td><code>C:\app\jdk-23.0.1</code></td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>追加<code>;%JAVA_HOME%\bin</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>打开“控制面板”，点击“系统和安全”。</li>
+<li>打开“控制面板”，点击“系统和安全”。
+JAVA_HOME | <code>C:\app\jdk-23.0.1</code></li>
+<li>
+<p>右键点击“此电脑”或“计算机”，选择“属性”。</p>
+</li>
+<li>
+<p>在系统属性窗口中，点击“高级系统设置”。</p>
+</li>
+<li>
+<p>在系统属性窗口的“高级”选项卡中，点击“环境变量”。</p>
+</li>
+<li>
+<p>在系统变量中，新建一个变量：</p>
+<ul>
+<li>
+<p><strong>变量名</strong>：<code>JAVA_HOME</code></p>
+</li>
+<li>
+<p><strong>变量值</strong>：为OpenJDK的解压目录，例如<code>C:\app\jdk-23.0.1</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>编辑“Path”变量，在变量值的末尾添加<code>;%JAVA_HOME%\bin</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p>注1：不同路径之间用<code>;</code>分隔，否则无法正确运行Java程序。</p>
+<p>注2：此步骤的目的是将Java命令所在的目录添加到系统的环境变量中，以便系统任意位置可以执行Java命令，后续类似操作作用相似。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<ul>
+<li>
+<p>打开命令提示符（CMD）或PowerShell、VS Code的Terminal。</p>
+</li>
+<li>
+<p>输入以下命令检查Java版本：</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>java<span class="w"> </span>-version
+</code></pre></div>
+</li>
+</ol>
+<p>如果安装成功，应能看到OpenJDK的版本信息。 </p>
+<h3 id="tomcat">安装Tomcat</h3>
+<p>浏览Tomcat官方网站(<a href="https://tomcat.apache.org">https://tomcat.apache.org</a>)，了解项目基本情况，安装最新版本，步骤如下：</p>
+<ol>
+<li>
+<p><strong>下载Tomcat 11</strong></p>
+<ul>
+<li>
+<p>打开浏览器，访问<strong>Tomcat官方网站</strong><a href="https://tomcat.apache.org/download-11.cgi">https://tomcat.apache.org/download-11.cgi</a>。</p>
+</li>
+<li>
+<p>进入下载页面，选择Tomcat 11的Windows版本，通常有<code>.zip</code>和<code>.exe</code>两种格式，建议下载<code>.zip</code>格式，便于灵活安装。</p>
+</li>
+</ul>
+<blockquote>
+<p>两种方式使用略有不同</p>
+</blockquote>
+</li>
+<li>
+<p><strong>解压文件</strong></p>
+<ul>
+<li>将下载的<code>.zip</code>文件解压到指定目录，如<code>C:\app\apache-tomcat-11.0.2</code>。</li>
+</ul>
+</li>
+<li>
+<p><strong>配置环境变量</strong></p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>变量值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CATALINA_HOME</td>
+<td><code>C:\app\apache-tomcat-11.0.2</code></td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>追加<code>;%CATALINA_HOME%\bin;%CATALINA_HOME%\lib</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>右键点击“此电脑”，选择“属性”。</p>
+</li>
+<li>
+<p>点击“高级系统设置”，在“系统属性”窗口中点击“环境变量”。</p>
+</li>
+<li>
+<p>在“系统变量”中，新建变量<code>CATALINA_HOME</code>，变量值为Tomcat的安装目录，即<code>C:\app\apache-tomcat-11.0.2</code>。</p>
+</li>
+<li>
+<p>找到<code>Path</code>变量，点击“编辑”，新增<code>%CATALINA_HOME%\bin</code>和<code>%CATALINA_HOME%\lib</code>。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<ul>
+<li>
+<p>进入Tomcat安装目录下的<code>bin</code>文件夹，双击<code>startup.bat</code>文件启动Tomcat。</p>
+</li>
+<li>
+<p>若出现命令行窗口并显示相关启动信息，说明Tomcat启动成功。可通过浏览器访问<code>http://localhost:8080</code>，若能看到Tomcat欢迎页面，则安装成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="sts-4">安装STS 4</h3>
+<p>浏览官方网站（<a href="https://spring.io/tools">https://spring.io/tools</a>），了解项目基本情况，安装Eclipse版本的STS4，步骤如下：</p>
+<ol>
+<li>
+<p><strong>安装</strong></p>
+<p>下载并解压<code>spring-tool-suite-4-4.27.0.RELEASE-e4.34.0-win32.win32.x86_64.zip</code>到目录<code>C:\app\sts-4.27.0.RELEASE</code></p>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<p>启动<code>SpringToolSuite4.exe</code>，确认软件能正常运行，否则根据提示检查Open JDK安装步骤</p>
+</li>
+<li>
+<p><strong>安装J2EE相关插件</strong></p>
+<p>打开菜单<code>Help/Install New Software...</code>，在<strong>Work with</strong>:输入<code>https://download.eclipse.org/releases/2024-12/</code>，在下方组件中选择<strong>Web, XML, Java EE and OSGi Enterprise Development</strong>，并在下一级组件中勾选以下组件：</p>
+<ol class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Java EE Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Java Web Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse Web Developer Tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Eclipse XML Editors and Tools</li>
+</ol>
+<blockquote>
+<p>注1：下载可能需要较长时间</p>
+<p>注2：JSP工程需要J2EE基础支持，STS4默认安装包移除了对基础J2EE的支持，此步骤若未执行，则无法创建Java Web工程。</p>
+<p>注3：也可以使用其它的集成开发环境，但无法保证能提供技术支持</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="sts4">修改STS4依赖仓库地址</h3>
+<p>将STS4的Maven依赖仓库地址修改为阿里云的地址以加快依赖下载速度，步骤如下：</p>
+<ol>
+<li>
+<p><strong>创建settings.xml文件</strong></p>
+<p>在本地用户目录(如：<code>C:\Users\Administrator</code>)下找到或创建一个名为<code>.m2</code>的文件夹（如果不存在）。</p>
+<p>在<code>.m2</code>文件夹中创建一个名为<code>settings.xml</code>的文件。</p>
+</li>
+<li>
+<p><strong>增加仓库配置</strong></p>
+<p>使用VS Code打开settings.xml文件，并添加以下内容：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">settings.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;settings</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">&lt;mirrors&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;mirror&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">      </span><span class="nt">&lt;id&gt;</span>aliyunmaven<span class="nt">&lt;/id&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">      </span><span class="nt">&lt;mirrorOf&gt;</span>*<span class="nt">&lt;/mirrorOf&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="nt">&lt;name&gt;</span>阿里云公共仓库<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">      </span><span class="nt">&lt;url&gt;</span>https://maven.aliyun.com/repository/public<span class="nt">&lt;/url&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nt">&lt;/mirror&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="nt">&lt;/mirrors&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>配置STS4使用新的settings.xml文件</strong></p>
+<p>打开STS4，点击菜单栏中的<code>Window/Preferences</code>。</p>
+<p>在左侧导航栏中，展开<code>Maven</code>选项，然后点击<code>User Settings</code>。</p>
+<p>在<code>User Settings</code>页面中，点击<code>Browse</code>按钮，选择刚创建的<code>settings.xml</code>文件。</p>
+<p>点击<code>Update Settings</code>按钮，然后点击<code>Update Index</code>按钮，以更新Maven索引。</p>
+<blockquote>
+<p>本书默认使用Maven作为依赖管理工具</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="jsp">创建JSP测试工程</h3>
+<p>在STS4中创建一个JSP工程，在页面中使用Java代码输出问候字符串，步骤如下：</p>
+<ol>
+<li>
+<p><strong>创建工程目录</strong></p>
+<p>在工作目录下创建工程目录<code>{学号}\exp1_2</code>，如：<code>C:\86263008\exp1_2</code></p>
+</li>
+<li>
+<p><strong>创建工程</strong></p>
+<p>启动<strong>STS4</strong>（Workspace指向工程目录），创建名为<code>HelloJsp</code>的Web工程（<code>File/New/Project/Web/Dynamic Web</code>），向导过程中修改配置如下：</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project Name</td>
+<td>HelloJsp</td>
+</tr>
+<tr>
+<td>Target runtime</td>
+<td>Apache Tomcat v11.0，在<code>New Runtime...</code>中指定Tomcat安装位置</td>
+</tr>
+<tr>
+<td>Dynamic web module version</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>Generate web.xml deployment descriptor</td>
+<td>选中</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>注册Tocmat服务器</strong></p>
+<p>在<strong>Servers视图</strong>（默认<strong>在STS4界面下方</strong>，也可通过菜单<code>Window/Show View/Servers</code>打开）添加<code>Apache/Tomcat 11</code></p>
+<blockquote>
+<p>关键设置：1. 指定<strong>Tomcat 11安装目录</strong>；2. JRE选择<strong>jre</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>创建<code>webapp/index.jsp</code></strong>，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HelloJsp/src/main/webapp/index.jsp</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="err">&lt;</span>%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot; 
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>  import=&quot;java.util.*&quot; pageEncoding=&quot;utf-8&quot;%&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello JSP<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="err">&lt;</span>%
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>  Date now = new Date();
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>  out.print(&quot;Hello Jsp:&quot; + now);
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>%&gt;
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>启动</strong></p>
+<p>在工程快捷菜单中运行<code>Run As/Run On Server</code>将工程部署到Tomcat并启动</p>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<p>在浏览器中访问<code>http://localhost:8080/HelloJsp/index.jsp</code>，确认部署成功</p>
+<p><iframe src="./src/HelloJspResult/index.jsp.html" frameborder="0" width="100%" height="50"></iframe></p>
+</li>
+</ol>
+<h3 id="springboot">创建SpringBoot测试工程</h3>
+<p>在STS4中创建一个Spring Boot工程，在页面中使用Java代码输出问候字符串，步骤如下：</p>
+<ol>
+<li>
+<p><strong>创建Spring Boot工程</strong></p>
+<ul>
+<li>
+<p>打开STS 4。</p>
+</li>
+<li>
+<p>点击菜单栏中的 <code>File</code> -&gt; <code>New</code> -&gt; <code>Spring Starter Project</code>。</p>
+</li>
+<li>
+<p>在弹出的 <code>New Spring Starter Project</code> 对话框中：</p>
+<ul>
+<li>
+<p><strong>项目基础信息</strong> 部分：</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>通常默认与Artifact相同，它是项目在本地的显示名称，如：<code>hellospringboot</code></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>依赖管理方式，选择<code>Maven</code></td>
+</tr>
+<tr>
+<td>Packagin</td>
+<td>项目打包方式，选择<code>Jar</code></td>
+</tr>
+<tr>
+<td>Java</td>
+<td>Java版本，选择<code>Java 23</code></td>
+</tr>
+<tr>
+<td>Group</td>
+<td>定义项目的组，例如 <code>edu.xust</code>。它在Maven项目中用于组织项目，类似于Java包名的结构</td>
+</tr>
+<tr>
+<td>Artifact</td>
+<td>项目的名称，例如 <code>hellospringboot</code>。这是项目在组中的唯一标识</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>项目的Java包结构根路径，例如<code>edu.xust.hellospringboot</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Dependencies</strong> 部分</p>
+<p>在搜索框中输入 <code>Spring Web</code>，选中 <code>Spring Web</code> 依赖。<code>Spring Web</code> 依赖提供了构建Web应用所需的基础组件，使得Spring Boot能够处理HTTP请求和响应。</p>
+</li>
+<li>
+<p>完成上述设置后，点击 <code>Finish</code> 按钮。STS 4会根据设置创建一个Spring Boot工程，并自动下载项目所需的依赖。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>创建控制器类</strong></p>
+<ul>
+<li>在项目的 <code>src/main/java/edu/xust/hellospringboot</code>（根据你在创建项目时填写的Group和Artifact而定）包下，创建一个新的Java类，例如 <code>HelloSpringBootController</code>。</li>
+<li>
+<p>在 <code>HelloSpringBootController</code> 类中编写如下代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HelloSpringBootController.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">edu.xust.hellospringboot</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.time.LocalDateTime</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.GetMapping</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.web.bind.annotation.RestController</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nd">@RestController</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloSpringBootController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&quot;/hi&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">Hi</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hello, Spring Boot!:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">LocalDateTime</span><span class="p">.</span><span class="na">now</span><span class="p">();</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>
+<p>代码解释：</p>
+<ul>
+<li>
+<p><code>@RestController</code> 注解：这是一个组合注解，相当于 <code>@Controller</code> 和 <code>@ResponseBody</code> 的结合。<code>@Controller</code> 用于标记该类是一个Spring MVC的控制器，负责处理Web请求；<code>@ResponseBody</code> 则表明该控制器的方法返回值将直接作为HTTP响应体返回，而不会被解析为视图名称。所以 <code>@RestController</code> 常用于构建RESTful风格的Web服务。</p>
+</li>
+<li>
+<p><code>@GetMapping("/hi")</code> 注解：用于映射HTTP GET请求到 <code>Hi</code> 方法。当客户端发送一个GET请求到 <code>/hi</code> 路径时，<code>Hi</code> 方法将被调用。</p>
+</li>
+<li>
+<p><code>Hi</code> 方法：该方法返回字符串 <code>Hello, Spring Boot!:</code>，作为对 <code>/hi</code> 请求的响应。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>启动</strong></p>
+<ul>
+<li>
+<p>在项目资源管理器中，找到项目的主启动类，通常在 <code>src/main/java/edu/xust/hellospringboot</code> 包下，类名一般是 <code>HelloSpringBootApplication</code>（其中 <code>HelloSpringBoot</code> 是你创建项目时的Artifact名称）。</p>
+</li>
+<li>
+<p>右键点击主启动类，选择 <code>Run As -&gt; Spring Boot App</code>。</p>
+</li>
+<li>
+<p>项目启动过程中，STS 4的控制台会输出一系列日志信息。当看到类似 <code>Started HelloSpringBootApplication in x.x seconds</code> 的信息时，表明Spring Boot应用已成功启动。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<ul>
+<li>
+<p>打开浏览器，在地址栏输入 <code>http://localhost:8080/hi</code>。这里 <code>8080</code> 是Spring Boot应用默认的端口号，如果在项目配置中修改了端口号，需使用相应的端口号。</p>
+</li>
+<li>
+<p>浏览器页面将显示 <code>Hello, Spring Boot!:20xx-xx-08Txx:xx:xx.xxxxxxxx</code>，说明Spring Boot版的Hello World程序已成功运行。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="rest-client">REST Client测试</h3>
+<p>使用REST Client插件，发送Http请求，了解Http协议报文内容，步骤如下：</p>
+<ol>
+<li>
+<p><strong>打开hellspringboot工程目录</strong></p>
+<p>使用<code>Visaul Studio Code</code>打开<code>HelloSpringBoot</code>项目所在目录</p>
+</li>
+<li>
+<p><strong>创建REST Client测试文件</strong></p>
+<p>在工程目录下创建：<code>test_hi.http</code>，代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hi_test.http</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="err">### Hi</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nf">GET</span> <span class="nn">http://localhost:8080/hi</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p><strong>发送链接请求</strong></p>
+<p>在<strong>代码编辑器</strong>中点击<strong>第2行代码上方</strong>的<code>Send Request</code>链接</p>
+<blockquote>
+<p>如果没有出现该链接，请检查前述REST Client安装步骤</p>
+</blockquote>
+</li>
+<li>
+<p><strong>验证</strong></p>
+<p>观察<strong>返回代码</strong>中与Http相关的各选项</p>
+</li>
+</ol>
+<h3 id="_3">拓展练习</h3>
+<ol>
+<li>
+<p>说明Java Web工程的目录结构</p>
+</li>
+<li>
+<p>说明Spring Boot工程的目录结构</p>
+</li>
+<li>
+<p>将输出字符串中的时间格式修改为<code>年年年年-月月-日日 时时:分分:秒秒</code></p>
+</li>
+<li>
+<p>修改默认端口号为<code>9090</code></p>
+</li>
+<li>
+<p>解释Rest Client返回内容的含义</p>
+</li>
+<li>
+<p>在<strong>HelloSpringBootController</strong>类中，增加一个<code>/hello</code>接口，返回<code>Hello, {自己的名字}!</code>字符串</p>
+</li>
+</ol>
+<blockquote>
+<p>注：任务中涉及操作，自行通过大模型等工具辅助完成，务必理解工作原理</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.path"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

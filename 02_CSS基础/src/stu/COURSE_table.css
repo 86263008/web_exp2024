@@ -1,0 +1,28 @@
+
+#COURSE {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#COURSE td,
+#COURSE th {
+  font-size: 1em;
+  border: 1px solid rgb(223, 224, 225);
+  padding: 3px 7px 2px 7px;
+}
+
+#COURSE th {
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: rgb(223, 224, 225);
+  color: #000000;
+}
+
+#COURSE tr.alt td {
+  color: #000000;
+  background-color: rgb(222,226,230);
+}
+

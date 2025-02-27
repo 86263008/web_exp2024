@@ -1,0 +1,13 @@
+@host = http://127.0.0.1:8888
+
+### add服务
+POST {{host}}/add HTTP/1.1
+content-type: application/json
+
+{
+  "a": 1,
+  "b": 2
+}
+
+### minus服务
+GET {{host}}/minus?a=3&b=2 HTTP/1.1
