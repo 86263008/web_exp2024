@@ -1021,7 +1021,7 @@
 <h2 id="4">4 实验环境</h2>
 <p>Windows7+、浏览器（推荐<code>Microsoft Edge/Chrome/Firefox</code>等）、Visual Studio Code(VS Code)</p>
 <h2 id="5">5 实验步骤</h2>
-<p>创建工作目录：<code>盘符:/{学号}/exp2</code></p>
+<p>创建工作目录：<code>{盘符}:/{学号}/exp2</code></p>
 <h3 id="_1">基本调试流程</h3>
 <p>创建一个Html文件并在浏览器中测试，步骤如下：</p>
 <ol>
@@ -1032,8 +1032,8 @@
 <p>创建源代码文件<code>{工作目录}\HelloTest\Hello.html</code></p>
 </li>
 <li>
-<p>编写HTML代码，参考代码如下：
-    <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hello.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<p>编写HTML代码，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Hello Html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1064,7 +1064,7 @@
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span><span class="cm">&lt;!--主体文件结束--&gt;</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span><span class="cp">&lt;!--结尾标签 - -&gt;</span>
-</code></pre></div></td></tr></table></div></p>
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>在<strong>浏览器</strong>中打开<code>Hello.html</code>并观察页面效果</p>
@@ -1077,13 +1077,13 @@
 <p>注：最常用的几个选项卡有：<strong>Elements</strong>，<strong>Source</strong>，<strong>Network</strong>等</p>
 </blockquote>
 <h3 id="_2">常见标签</h3>
-<p>练习Html中常见标签的使用方法，步骤如下：</p>
+<p>编写代码，练习Html中常见标签的使用方法，步骤如下：</p>
 <blockquote>
 <p>以<code>Hello.html</code>为模板练习调试以下标签，每个练习保存一个单独的文件</p>
 </blockquote>
 <h4 id="htmlbody">html的主体标签<code>&lt;body&gt;</code></h4>
-<p>在<code>&lt;body&gt;</code>中放置的是页面中所有的内容，如图片、文字、表格、表单、超链接等设置</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_body.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<p>创建页面：<code>html_body.html</code>，在<code>&lt;body&gt;</code>中放置的是页面中所有的内容，如图片、文字、表格、表单、超链接等设置，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">body标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -1115,7 +1115,8 @@
 <li>rgb(y%,y%,y%) y是一个介乎0.0到100.0之间的整数 (如， rgb(0%,80%,0%)</li>
 </ul>
 <h4 id="br">换行标签<code>&lt;br&gt;</code></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_br.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<p>创建页面：<code>html_br.html</code>，使用<code>&lt;br&gt;</code>标签，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">br标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -1136,7 +1137,8 @@
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="p">段落标签<code>&lt;p&gt;</code>及属性</h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_p.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<p>创建页面：<code>html_p.html</code>，使用<code>&lt;p&gt;</code>标签，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">p标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -1167,7 +1169,8 @@
 <a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="pre">原样显示文字标签<code>&lt;pre&gt;</code></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_pre.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<p>创建页面：<code>html_pre.html</code>，使用<code>&lt;pre&gt;</code>标签，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">pre标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -1196,7 +1199,8 @@
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="center">居中对齐标签<code>&lt;center&gt;</code></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_center.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<p>创建页面：<code>html_center.html</code>，使用<code>&lt;center&gt;</code>标签，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">center标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
@@ -1221,7 +1225,8 @@
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h4 id="hn">标题文字标签<code>&lt;hn&gt;</code></h4>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_hn.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<p>创建页面：<code>html_hn.html</code>，使用<code>&lt;hn&gt;</code>标签，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">hn标签</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -1256,9 +1261,9 @@
 <h4 id="a">超链接<code>&lt;a&gt;</code></h4>
 <ol>
 <li>
-<p>书签链接</p>
-<p>相同页面链接：<strong>html_a_a.html</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_a_a.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<p>锚点</p>
+<p>创建页面：<code>html_a_a.html</code> ，包含锚点<strong>lb</strong>及其它若干锚点，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">页内链接锚点</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
@@ -1307,7 +1312,7 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>唐诗欣赏<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lb&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lb&quot;</span><span class="p">&gt;</span><span class="cm">&lt;!-- 定义锚点lb --&gt;</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>李白<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a>  <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <a id="__codelineno-7-14" name="__codelineno-7-14"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#t.2&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span><span class="p">&gt;</span>清平調三首<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
@@ -1338,8 +1343,8 @@
 <a id="__codelineno-7-39" name="__codelineno-7-39"></a>
 <a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p>不同页面链接：<strong>html_a_b.html</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_a_b.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<p>创建页面：<code>html_a_b.html</code>，链接页面<code>html_a_b.html</code>中的<strong>lb</strong>锚点，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">跨页链接锚点</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -1379,7 +1384,7 @@
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a>
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>  <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;a.htm#lb&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>  <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;html_a_a.html#lb&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-8-9" name="__codelineno-8-9"></a>      <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10"></a>        <span class="p">&lt;</span><span class="nt">font</span> <span class="na">color</span><span class="o">=</span><span class="s">&quot;#339933&quot;</span><span class="p">&gt;</span>李白<span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11"></a>      <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -1409,51 +1414,8 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>在站点内部建立链接</p>
-<table>
-<thead>
-<tr>
-<th>当前页面</th>
-<th>被链接页面</th>
-<th>超链接代码</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2-1.html</td>
-<td>3-1.html</td>
-<td><code>&lt;a href="3-1.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-<tr>
-<td>3-1.html</td>
-<td>1-1.html</td>
-<td><code>&lt;a href="asm/1-1.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-<tr>
-<td>sy.html</td>
-<td>1-1.html</td>
-<td><code>&lt;a href="ssm/asm/1-1.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-<tr>
-<td>2-1.html</td>
-<td>sy.html</td>
-<td><code>&lt;a href="../sy.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-<tr>
-<td>1-1.html</td>
-<td>sy.html</td>
-<td><code>&lt;a href="../../sy.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-<tr>
-<td>sy.html</td>
-<td>2-1.html</td>
-<td><code>&lt;a href="ssm/2-1.html"&gt;超链接元素&lt;/a&gt;</code></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
 <p>外部链接</p>
+<p>创建页面：<code>html_a_out.html</code>, 链接外部网站，常见协议如下：</p>
 <table>
 <thead>
 <tr>
@@ -1556,8 +1518,8 @@
 <h4 id="img">图片<code>&lt;img&gt;</code></h4>
 <ol>
 <li>
-<p>普通插入图片(使用自己电脑上图片替换链接图片)</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<p>创建页面：<code>html_img.html</code>，普通插入图片(使用自己电脑上图片替换链接图片)，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">插入图片</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
@@ -1583,14 +1545,10 @@
 <a id="__codelineno-11-12" name="__codelineno-11-12"></a>
 <a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<details class="tip">
-<summary>运行结果</summary>
-<p><iframe src="./src/html_img.html" frameborder="0" width="100%" height="300"></iframe></p>
-</details>
 </li>
 <li>
-<p>设定上下左右空白位置 </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_space.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<p>创建页面：<code>html_img_space.html</code>，设定上下左右空白位置，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">左右空白</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
@@ -1614,8 +1572,8 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>设定字画对其方式 </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_align.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<p>创建页面：<code>html_img_align</code>，设定字画对其方式，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">对其方式</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
@@ -1700,7 +1658,8 @@
 </li>
 <li>
 <p>图片大小设定</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_size.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<p>创建页面：<code>html_img_size.html</code>，设定图片大小，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">图片大小</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
@@ -1741,7 +1700,8 @@
 </li>
 <li>
 <p>图像边框的设定</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_border.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<p>创建页面：<code>html_img_border.html</code>，设定图片边框，参考代码如下：  </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">图片边框</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
@@ -1772,7 +1732,8 @@
 </li>
 <li>
 <p>图像的超链接 </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_a.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<p>创建页面：<code>html_img_a.html</code>，设定图片的超链接，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">图片的超链接</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
@@ -1819,7 +1780,8 @@
 </li>
 <li>
 <p>用<code>&lt;img&gt;</code>标签插入avi文件 </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_img_avi.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<p>创建页面：<code>html_img_avi.html</code>，用<code>&lt;img&gt;</code>标签插入avi文件，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">插入avi</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
@@ -1921,7 +1883,8 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_marquee.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<p>创建页面：<code>html_marquee.html</code>，使用<code>&lt;marquee&gt;</code>实现滚动字幕，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">滚动字幕</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
@@ -1965,7 +1928,8 @@
 <ol>
 <li>
 <p>一般应用</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_iframe.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<p>创建页面：<code>html_iframe.html</code>，使用<code>&lt;iframe&gt;</code>实现浮动窗口，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">浮动窗口</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
@@ -2002,7 +1966,8 @@
 </li>
 <li>
 <p>自适应窗口高度</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">html_iframe_fit.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<p>创建页面：<code>html_iframe_fit.html</code>，使用<code>&lt;iframe&gt;</code>实现自适应窗口高度，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">自适应窗口高度</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
@@ -2186,9 +2151,10 @@
 <blockquote>
 <p>primary key(StuNo, CourseNo),foreign key(StuNo) references Student(No),foreign key(CourseNo) references Course(No)</p>
 </blockquote>
-<p>使用<strong>Html</strong>为<strong>学生表</strong>建立用于数据采集的表单界面和用于数据展示的表格界面，以下参考代码：</p>
-<p><strong>表单界面-学生表</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">stu/student_form.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<ol>
+<li>
+<p>创建页面：<code>student_form.html</code>，使用<code>&lt;form&gt;</code>等标签实现学生表的表单界面（用于输入），参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">表单界面</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
@@ -2264,8 +2230,10 @@
 <a id="__codelineno-21-37" name="__codelineno-21-37"></a>
 <a id="__codelineno-21-38" name="__codelineno-21-38"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>表格界面-学生表</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">stu/student_table.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+</li>
+<li>
+<p>创建页面：<code>student_table.html</code>，使用<code>&lt;table&gt;</code>等标签实现学生表的表格界面（用于输出），参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">表格界面</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
@@ -2393,6 +2361,8 @@
 <a id="__codelineno-22-63" name="__codelineno-22-63"></a>
 <a id="__codelineno-22-64" name="__codelineno-22-64"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
+</li>
+</ol>
 <h3 id="_6">拓展练习</h3>
 <ol>
 <li>
