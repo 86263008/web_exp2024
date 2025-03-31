@@ -1,985 +1,546 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../02_CSS%E5%9F%BA%E7%A1%80/index.html">
-      
-      
-        <link rel="next" href="../03_Javascript%E9%AB%98%E7%BA%A7%E5%AE%9E%E9%AA%8C/index.html">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
-    
-    
-      
-        <title>2.3 Javascript基础 - 基于WEB的应用程序开发-实验指导书</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<!DOCTYPE html>
 
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#javascript" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../02_CSS%E5%9F%BA%E7%A1%80/index.html" rel="prev"/>
+<link href="../03_Javascript%E9%AB%98%E7%BA%A7%E5%AE%9E%E9%AA%8C/index.html" rel="next"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.10" name="generator"/>
+<title>2.3 Javascript基础 - 基于WEB的应用程序开发-实验指导书</title>
+<link href="../assets/stylesheets/main.4af4bdda.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#javascript">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="基于WEB的应用程序开发-实验指导书" class="md-header__button md-logo" aria-label="基于WEB的应用程序开发-实验指导书" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="基于WEB的应用程序开发-实验指导书" class="md-header__button md-logo" data-md-component="logo" href="../index.html" title="基于WEB的应用程序开发-实验指导书">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             基于WEB的应用程序开发-实验指导书
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               2.3 Javascript基础
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="purple" data-md-color-accent="indigo"  aria-label="夜间模式"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="夜间模式" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="日间模式"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="日间模式" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="夜间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="purple" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="夜间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+</label>
+<input aria-label="日间模式" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="日间模式">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+</label>
 </form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-    
-  </nav>
-  
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="基于WEB的应用程序开发-实验指导书" class="md-nav__button md-logo" aria-label="基于WEB的应用程序开发-实验指导书" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="基于WEB的应用程序开发-实验指导书" class="md-nav__button md-logo" data-md-component="logo" href="../index.html" title="基于WEB的应用程序开发-实验指导书">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
     基于WEB的应用程序开发-实验指导书
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../index.html">
+<span class="md-ellipsis">
     首页
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
     1. 实验环境搭建
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             1. 实验环境搭建
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../00_%E7%8E%AF%E5%A2%83%E5%BB%BA%E7%AB%8B/Java/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../00_%E7%8E%AF%E5%A2%83%E5%BB%BA%E7%AB%8B/Java/index.html">
+<span class="md-ellipsis">
     1.1 前端环境搭建
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Java/05_%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Java/05_%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
+<span class="md-ellipsis">
     1.2 后端境搭建
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
     2 前端基础实验
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             2 前端基础实验
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01_Html%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01_Html%E5%9F%BA%E7%A1%80/index.html">
+<span class="md-ellipsis">
     Html基础实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_CSS%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02_CSS%E5%9F%BA%E7%A1%80/index.html">
+<span class="md-ellipsis">
     2.2 CSS基础实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
     2.3 Javascript基础
     
   </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="index.html">
+<span class="md-ellipsis">
     2.3 Javascript基础
     
   </span>
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label=" ">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-       
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label=" " class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
       1 实验类型
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
       2 实验目的
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
       3 实验要求
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
       4 实验环境
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
       5 实验步骤
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5 实验步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="5 实验步骤" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
       变量
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       数组与循环
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       控制语句与函数
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       事件处理
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+<span class="md-ellipsis">
       JSON
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       综合
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="综合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="综合" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       弹出框
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       表单校验
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       拓展练习
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<span class="md-ellipsis">
     3 前端高级实验
     
   </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             3 前端高级实验
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_Javascript%E9%AB%98%E7%BA%A7%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03_Javascript%E9%AB%98%E7%BA%A7%E5%AE%9E%E9%AA%8C/index.html">
+<span class="md-ellipsis">
     3.1 Javascript高级实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04_jQuery/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04_jQuery/index.html">
+<span class="md-ellipsis">
     3.2 jQuery
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04_Bootstrap/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04_Bootstrap/index.html">
+<span class="md-ellipsis">
     3.3 Bootstrap
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04_Vue.js%E5%9F%BA%E7%A1%80/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04_Vue.js%E5%9F%BA%E7%A1%80/index.html">
+<span class="md-ellipsis">
     3.4 Vue.js
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Java/05_JSP%E7%9A%84%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    4 JSP的隐含对象实验
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<span class="md-ellipsis">
+    4 JSP基础实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Java/06_Servlet%E5%8F%8AFilter%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    5 Servlet及Filter基础实验
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            4 JSP基础实验
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Java/05_JSP%E7%9A%84%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1%E5%AE%9E%E9%AA%8C/index.html">
+<span class="md-ellipsis">
+    4.1 JSP的隐含对象实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Java/06_Servlet%E5%8F%8AFilter%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/index.html">
+<span class="md-ellipsis">
+    4.2 Servlet及Filter基础实验
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Java/07_SpringBoot%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Java/06_JSP%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C/index.html">
+<span class="md-ellipsis">
+    5 JSP综合实验
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Java/07_SpringBoot%E7%BB%BC%E5%90%88%E5%AE%9E%E9%AA%8C/index.html">
+<span class="md-ellipsis">
     6 Spring Boot综合实验
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
+</a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label=" ">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-       
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label=" " class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+</label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+<span class="md-ellipsis">
       1 实验类型
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+<span class="md-ellipsis">
       2 实验目的
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+<span class="md-ellipsis">
       3 实验要求
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+<span class="md-ellipsis">
       4 实验环境
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+<span class="md-ellipsis">
       5 实验步骤
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5 实验步骤">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="5 实验步骤" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+<span class="md-ellipsis">
       变量
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+<span class="md-ellipsis">
       数组与循环
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+<span class="md-ellipsis">
       控制语句与函数
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+<span class="md-ellipsis">
       事件处理
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#json" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+<span class="md-ellipsis">
       JSON
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+<span class="md-ellipsis">
       综合
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="综合">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="综合" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+<span class="md-ellipsis">
       弹出框
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+<span class="md-ellipsis">
       表单校验
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+<span class="md-ellipsis">
       拓展练习
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
 <h1 id="javascript">Javascript基础</h1>
 <h2 id="1">1 实验类型</h2>
 <p>验证型，2学时，必选实验</p>
@@ -990,13 +551,11 @@
 <h2 id="4">4 实验环境</h2>
 <p>Windows7、Microsoft Edge/Chrome/Firefox等浏览器、Visual Studio Code(VS Code)</p>
 <h2 id="5">5 实验步骤</h2>
-<blockquote>
-<p>工作目录：<code>{盘符}:/{学号}/exp2_3</code>， 后续文件均存放在工作目录</p>
-</blockquote>
+<p>创建工作目录：<code>{盘符}:/{学号}/exp2_3</code>， 后续文件均存放在工作目录</p>
 <h3 id="_1">变量</h3>
 <p>编写Javascript代码，定义并使用变量，理解变量作用域的概念。</p>
 <p>创建文件：<code>js_var.html</code>，调试以下代码，观察并解释窗口中显示的结果：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">变量</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">变量</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -1008,23 +567,23 @@
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
 <span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">29</span><span class="p">;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">test</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">num</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">x</span><span class="o">++</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;内部的num的值为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"内部的num的值为："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"&lt;br&gt;"</span><span class="p">);</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="nx">test</span><span class="p">();</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;测试x的值为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;测试y的值为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;外部的num的值为：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;&lt;br&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"测试x的值为："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"&lt;br&gt;"</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"测试y的值为："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"&lt;br&gt;"</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"外部的num的值为："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"&lt;br&gt;"</span><span class="p">);</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="_2">数组与循环</h3>
 <p>创建文件：<code>js_array.html</code>，使用数组存储一周的星期名称，使用数组遍历的方式输出数组中的内容，参考代码：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">数组与循环</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">数组与循环</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
@@ -1034,7 +593,7 @@
 <span class="normal"><a href="#__codelineno-1-8">8</a></span>
 <span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="c1">// 定义一个数组，存储一周的星期名称</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">weekDays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;星期一&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期二&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期三&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期四&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期五&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期六&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;星期日&quot;</span><span class="p">];</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">weekDays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"星期一"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期二"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期三"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期四"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期五"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期六"</span><span class="p">,</span><span class="w"> </span><span class="s2">"星期日"</span><span class="p">];</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="c1">// 使用for循环遍历数组并输出每个元素</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">weekDays</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1045,7 +604,7 @@
 <h3 id="_3">控制语句与函数</h3>
 <p>创建文件：<code>js_if.html</code>，通过分支控制语句及函数调用实现以下功能：根据时间段的不同，在网页中显示不同的问候语，12点以前，则输出“早上好！”的问候语，颜色为绿色；12点至18点，则输出“下午好！”颜色为黄色；18点以后输出“晚上好！”颜色为黑色。</p>
 <p>参考代码:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">控制语句与函数</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">控制语句与函数</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -1056,16 +615,16 @@
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">&quot;javascript&quot;</span><span class="p">&gt;</span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">language</span><span class="o">=</span><span class="s">"javascript"</span><span class="p">&gt;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">curday</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="nx">hours</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">curday</span><span class="p">.</span><span class="nx">getHours</span><span class="p">();</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;现在是：&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">hours</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;点，&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"现在是："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">hours</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"点，"</span><span class="p">);</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hours</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">12</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;font color=&#39;00ff00&#39;&gt;早上好！&lt;/font&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"&lt;font color='00ff00'&gt;早上好！&lt;/font&gt;"</span><span class="p">);</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">hours</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;font color=&#39;ffff00&#39;&gt;中午好！&lt;/font&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"&lt;font color='ffff00'&gt;中午好！&lt;/font&gt;"</span><span class="p">);</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;&lt;font color=&#39;000000&#39;&gt;晚上好！&lt;/font&gt;&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"&lt;font color='000000'&gt;晚上好！&lt;/font&gt;"</span><span class="p">);</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
@@ -1118,7 +677,7 @@
 </tbody>
 </table>
 <p>参考代码：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">事件处理</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">事件处理</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -1184,75 +743,75 @@
 <span class="normal"><a href="#__codelineno-3-64">64</a></span>
 <span class="normal"><a href="#__codelineno-3-65">65</a></span>
 <span class="normal"><a href="#__codelineno-3-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="c1">// 定义事件处理函数  </span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleClick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;你点击了按钮！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'你点击了按钮！'</span><span class="p">;</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleMouseDown</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;鼠标按下了按钮！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myButton'</span><span class="p">);</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'鼠标按下了按钮！'</span><span class="p">;</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-20" name="__codelineno-3-20"></a>
 <a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleMouseUp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;鼠标松开了按钮！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myButton'</span><span class="p">);</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'鼠标松开了按钮！'</span><span class="p">;</span>
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-27" name="__codelineno-3-27"></a>
 <a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleMouseOver</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;鼠标悬停在按钮上！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myButton'</span><span class="p">);</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'鼠标悬停在按钮上！'</span><span class="p">;</span>
 <a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-34" name="__codelineno-3-34"></a>
 <a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleMouseOut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myButton&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;鼠标离开了按钮！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">button</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myButton'</span><span class="p">);</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">      </span><span class="nx">button</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">'active'</span><span class="p">);</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'鼠标离开了按钮！'</span><span class="p">;</span>
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-41" name="__codelineno-3-41"></a>
 <a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleFocus</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myInput&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">      </span><span class="nx">input</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;blue&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当输入框获得焦点时，改变边框颜色  </span>
-<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;输入框获得了焦点！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myInput'</span><span class="p">);</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">      </span><span class="nx">input</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'blue'</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当输入框获得焦点时，改变边框颜色  </span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'输入框获得了焦点！'</span><span class="p">;</span>
 <a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-48" name="__codelineno-3-48"></a>
 <a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">handleBlur</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myInput&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">      </span><span class="nx">input</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当输入框失去焦点时，移除边框颜色  </span>
-<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">);</span>
-<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;输入框失去了焦点！&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myInput'</span><span class="p">);</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">      </span><span class="nx">input</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">''</span><span class="p">;</span><span class="w"> </span><span class="c1">// 当输入框失去焦点时，移除边框颜色  </span>
+<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'message'</span><span class="p">);</span>
+<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">      </span><span class="nx">message</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'输入框失去了焦点！'</span><span class="p">;</span>
 <a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
 <a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-3-57" name="__codelineno-3-57"></a>
 <a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-3-59" name="__codelineno-3-59"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myButton&quot;</span> <span class="na">onmousedown</span><span class="o">=</span><span class="s">&quot;handleMouseDown()&quot;</span> <span class="na">onmouseup</span><span class="o">=</span><span class="s">&quot;handleMouseUp()&quot;</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">&quot;handleMouseOver()&quot;</span>
-<a id="__codelineno-3-60" name="__codelineno-3-60"></a>    <span class="na">onmouseout</span><span class="o">=</span><span class="s">&quot;handleMouseOut()&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;handleClick()&quot;</span><span class="p">&gt;</span>点击我<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-3-59" name="__codelineno-3-59"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"myButton"</span> <span class="na">onmousedown</span><span class="o">=</span><span class="s">"handleMouseDown()"</span> <span class="na">onmouseup</span><span class="o">=</span><span class="s">"handleMouseUp()"</span> <span class="na">onmouseover</span><span class="o">=</span><span class="s">"handleMouseOver()"</span>
+<a id="__codelineno-3-60" name="__codelineno-3-60"></a>    <span class="na">onmouseout</span><span class="o">=</span><span class="s">"handleMouseOut()"</span> <span class="na">onclick</span><span class="o">=</span><span class="s">"handleClick()"</span><span class="p">&gt;</span>点击我<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-3-61" name="__codelineno-3-61"></a>
-<a id="__codelineno-3-62" name="__codelineno-3-62"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myInput&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;输入文本&quot;</span> <span class="na">onfocus</span><span class="o">=</span><span class="s">&quot;handleFocus()&quot;</span> <span class="na">onblur</span><span class="o">=</span><span class="s">&quot;handleBlur()&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-3-63" name="__codelineno-3-63"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;</span>你还没有进行任何操作。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-3-62" name="__codelineno-3-62"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">id</span><span class="o">=</span><span class="s">"myInput"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"输入文本"</span> <span class="na">onfocus</span><span class="o">=</span><span class="s">"handleFocus()"</span> <span class="na">onblur</span><span class="o">=</span><span class="s">"handleBlur()"</span><span class="p">&gt;</span>
+<a id="__codelineno-3-63" name="__codelineno-3-63"></a>  <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">"message"</span><span class="p">&gt;</span>你还没有进行任何操作。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <a id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-3-65" name="__codelineno-3-65"></a>
 <a id="__codelineno-3-66" name="__codelineno-3-66"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="json">JSON</h3>
 <p>创建文件：<code>js_event.html</code>，使用<strong>JSON</strong>数组存放学生信息：学号、姓名、年龄，在界面中显示学生信息，参考代码：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">JSON</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -1299,15 +858,15 @@
 <span class="normal"><a href="#__codelineno-4-45">45</a></span>
 <span class="normal"><a href="#__codelineno-4-46">46</a></span>
 <span class="normal"><a href="#__codelineno-4-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh-CN&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"zh-CN"</span><span class="p">&gt;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>学生信息<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;studentTable&quot;</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>  <span class="p">&lt;</span><span class="nt">table</span> <span class="na">id</span><span class="o">=</span><span class="s">"studentTable"</span> <span class="na">border</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>      <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
 <a id="__codelineno-4-13" name="__codelineno-4-13"></a>        <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>学号<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
@@ -1323,13 +882,13 @@
 <a id="__codelineno-4-23" name="__codelineno-4-23"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="c1">// 假设这是从服务器获取的JSON数据</span>
 <a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">studentData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;学号&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;20210001&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;姓名&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;张三&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;年龄&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;学号&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;20210002&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;姓名&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;李四&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;年龄&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;学号&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;20210003&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;姓名&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;王五&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;年龄&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">"学号"</span><span class="o">:</span><span class="w"> </span><span class="s2">"20210001"</span><span class="p">,</span><span class="w"> </span><span class="s2">"姓名"</span><span class="o">:</span><span class="w"> </span><span class="s2">"张三"</span><span class="p">,</span><span class="w"> </span><span class="s2">"年龄"</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">"学号"</span><span class="o">:</span><span class="w"> </span><span class="s2">"20210002"</span><span class="p">,</span><span class="w"> </span><span class="s2">"姓名"</span><span class="o">:</span><span class="w"> </span><span class="s2">"李四"</span><span class="p">,</span><span class="w"> </span><span class="s2">"年龄"</span><span class="o">:</span><span class="w"> </span><span class="mf">21</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="s2">"学号"</span><span class="o">:</span><span class="w"> </span><span class="s2">"20210003"</span><span class="p">,</span><span class="w"> </span><span class="s2">"姓名"</span><span class="o">:</span><span class="w"> </span><span class="s2">"王五"</span><span class="p">,</span><span class="w"> </span><span class="s2">"年龄"</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">    </span><span class="p">];</span>
 <a id="__codelineno-4-30" name="__codelineno-4-30"></a>
 <a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">    </span><span class="c1">// 获取表格的tbody元素</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">tbody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;studentTable&#39;</span><span class="p">).</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;tbody&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">tbody</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'studentTable'</span><span class="p">).</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'tbody'</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
 <a id="__codelineno-4-33" name="__codelineno-4-33"></a>
 <a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">    </span><span class="c1">// 遍历JSON数据并创建表格行</span>
 <a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">    </span><span class="nx">studentData</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">student</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1337,9 +896,9 @@
 <a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">cell1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
 <a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">cell2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
 <a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">cell3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">row</span><span class="p">.</span><span class="nx">insertCell</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">      </span><span class="nx">cell1</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;学号&quot;</span><span class="p">];</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">      </span><span class="nx">cell2</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;姓名&quot;</span><span class="p">];</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">      </span><span class="nx">cell3</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">&quot;年龄&quot;</span><span class="p">];</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">      </span><span class="nx">cell1</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">"学号"</span><span class="p">];</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">      </span><span class="nx">cell2</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">"姓名"</span><span class="p">];</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">      </span><span class="nx">cell3</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">student</span><span class="p">[</span><span class="s2">"年龄"</span><span class="p">];</span>
 <a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">    </span><span class="p">});</span>
 <a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1349,7 +908,7 @@
 <h3 id="_5">综合</h3>
 <h4 id="_6">弹出框</h4>
 <p>创建文件：<code>js_comprehensive.html</code>，使用Html+css+js实现一个可关闭的弹出框，参考代码如下:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">弹出框</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">  1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">弹出框</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">  4</a></span>
@@ -1452,35 +1011,35 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">      </span><span class="c1">// 获取弹窗</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">modal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">modal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myModal'</span><span class="p">);</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a>
 <a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">      </span><span class="c1">// 打开弹窗的按钮对象</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;myBtn&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">btn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myBtn"</span><span class="p">);</span>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a>
 <a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">      </span><span class="c1">// 获取 &lt;span&gt; 元素，用于关闭弹窗</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">span</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.close&#39;</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">span</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.close'</span><span class="p">);</span>
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a>
 <a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">      </span><span class="c1">// 点击按钮打开弹窗</span>
 <a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">      </span><span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;block&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">        </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"block"</span><span class="p">;</span>
 <a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-5-24" name="__codelineno-5-24"></a>
 <a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">      </span><span class="c1">// 点击 &lt;span&gt; (x), 关闭弹窗</span>
 <a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">      </span><span class="nx">span</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">        </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
 <a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-5-29" name="__codelineno-5-29"></a>
 <a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">      </span><span class="c1">// 在用户点击其他地方时，关闭弹窗</span>
 <a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">      </span><span class="nb">window</span><span class="p">.</span><span class="nx">onclick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">modal</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">          </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;none&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">          </span><span class="nx">modal</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"none"</span><span class="p">;</span>
 <a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">    </span><span class="p">}</span>
@@ -1530,16 +1089,16 @@
 <a id="__codelineno-5-80" name="__codelineno-5-80"></a><span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <a id="__codelineno-5-81" name="__codelineno-5-81"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-5-82" name="__codelineno-5-82"></a>
-<a id="__codelineno-5-83" name="__codelineno-5-83"></a><span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;init()&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-83" name="__codelineno-5-83"></a><span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">"init()"</span><span class="p">&gt;</span>
 <a id="__codelineno-5-84" name="__codelineno-5-84"></a>  <span class="cm">&lt;!-- 打开弹窗按钮 --&gt;</span>
-<a id="__codelineno-5-85" name="__codelineno-5-85"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myBtn&quot;</span><span class="p">&gt;</span>打开弹窗<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-5-85" name="__codelineno-5-85"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">"myBtn"</span><span class="p">&gt;</span>打开弹窗<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-5-86" name="__codelineno-5-86"></a>
 <a id="__codelineno-5-87" name="__codelineno-5-87"></a>  <span class="cm">&lt;!-- 弹窗 --&gt;</span>
-<a id="__codelineno-5-88" name="__codelineno-5-88"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myModal&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modal&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-88" name="__codelineno-5-88"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"myModal"</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal"</span><span class="p">&gt;</span>
 <a id="__codelineno-5-89" name="__codelineno-5-89"></a>
 <a id="__codelineno-5-90" name="__codelineno-5-90"></a>    <span class="cm">&lt;!-- 弹窗内容 --&gt;</span>
-<a id="__codelineno-5-91" name="__codelineno-5-91"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modal-content&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-5-92" name="__codelineno-5-92"></a>      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;close&quot;</span><span class="p">&gt;</span><span class="ni">&amp;times;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-91" name="__codelineno-5-91"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"modal-content"</span><span class="p">&gt;</span>
+<a id="__codelineno-5-92" name="__codelineno-5-92"></a>      <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"close"</span><span class="p">&gt;</span><span class="ni">&amp;times;</span><span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <a id="__codelineno-5-93" name="__codelineno-5-93"></a>      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>弹窗中的文本...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <a id="__codelineno-5-94" name="__codelineno-5-94"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-5-95" name="__codelineno-5-95"></a>
@@ -1561,7 +1120,7 @@
 <tbody>
 <tr>
 <td>学号 (no)</td>
-<td>- 不能为空<br>- 必须是数字</td>
+<td>- 不能为空<br/>- 必须是数字</td>
 </tr>
 <tr>
 <td>姓名 (name)</td>
@@ -1573,7 +1132,7 @@
 </tr>
 <tr>
 <td>年龄 (age)</td>
-<td>- 不能为空<br>- 必须是正整数</td>
+<td>- 不能为空<br/>- 必须是正整数</td>
 </tr>
 <tr>
 <td>所在系 (dept)</td>
@@ -1582,7 +1141,7 @@
 </tbody>
 </table>
 <p>代码模板如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">表单校验</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">表单校验</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -1621,14 +1180,14 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>学生表<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a>  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">validateForm</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="s2">&quot;studentForm&quot;</span><span class="p">][</span><span class="s2">&quot;no&quot;</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="s2">"studentForm"</span><span class="p">][</span><span class="s2">"no"</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">no</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;学号不能为空&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">no</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">""</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s2">"学号不能为空"</span><span class="p">);</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a>
@@ -1639,15 +1198,15 @@
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>学生表<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;studentForm&quot;</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">&quot;return validateForm()&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">"studentForm"</span> <span class="na">onsubmit</span><span class="o">=</span><span class="s">"return validateForm()"</span> <span class="na">action</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>
 <a id="__codelineno-6-25" name="__codelineno-6-25"></a>      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;no&quot;</span><span class="p">&gt;</span>学号:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;no&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;no&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;请输入学号..&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a>        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;</span>学号:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">id</span><span class="o">=</span><span class="s">"no"</span> <span class="na">name</span><span class="o">=</span><span class="s">"no"</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">"请输入学号.."</span><span class="p">&gt;</span>
 <a id="__codelineno-6-28" name="__codelineno-6-28"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-6-29" name="__codelineno-6-29"></a>
 <a id="__codelineno-6-30" name="__codelineno-6-30"></a>      <span class="cm">&lt;!-- 完整代码参考html部分实验 --&gt;</span>      
-<a id="__codelineno-6-31" name="__codelineno-6-31"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>提交<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>提交<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <a id="__codelineno-6-32" name="__codelineno-6-32"></a>    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <a id="__codelineno-6-33" name="__codelineno-6-33"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -1669,59 +1228,33 @@
 </blockquote>
 </li>
 </ol>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
-
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.path"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.expand", "navigation.sections", "navigation.path"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+<script src="../js/mermaid.min.js"></script>
+<script src="../js/init_mermaid.js"></script>
+</body>
 </html>

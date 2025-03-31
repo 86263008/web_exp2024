@@ -1,5 +1,8 @@
-GET http://localhost:8080/HelloServlet/HelloForm?first_name=%E4%B8%89&last_name=%E5%BC%A0 HTTP/1.1
+@app = HelloServlet
+
+###
+GET http://localhost:8080/{{app}}/HelloForm?first_name=%E4%B8%89&last_name=%E5%BC%A0 HTTP/1.1
 
 ###
 
-GET http://localhost:8080/HelloServlet/getSessionInfo HTTP/1.1
+GET http://localhost:8080/{{app}}/getSessionInfo HTTP/1.1
