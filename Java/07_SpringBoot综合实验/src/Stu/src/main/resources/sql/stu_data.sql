@@ -10,24 +10,6 @@ insert into STUDENT (Id,no,name,gender,age,dept)
 values ('X2','X2','X2','X2',2,'X2'); 
 insert into STUDENT (Id,no,name,gender,age,dept) 
 values ('X3','X3','X3','X3',3,'X3'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X4','X4','X4','X4',4,'X4'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X5','X5','X5','X5',5,'X5'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X6','X6','X6','X6',6,'X6'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X7','X7','X7','X7',7,'X7'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X8','X8','X8','X8',8,'X8'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X9','X9','X9','X9',9,'X9'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X10','X10','X10','X10',10,'X10'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X11','X11','X11','X11',11,'X11'); 
-insert into STUDENT (Id,no,name,gender,age,dept) 
-values ('X12','X12','X12','X12',12,'X12'); 
 -- --8<-- [end:student]
 
 

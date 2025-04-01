@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 
-<mapper namespace="xust.stu.demo.dao.StudentDao">
+<mapper namespace="xust.demo.stu.dao.StudentDao">
   
-  <resultMap type="xust.stu.demo.domain.Student" id="studentResult">
+  <resultMap type="xust.demo.stu.domain.Student" id="studentResult">
     <result property="id" column="ID"></result>
     <result property="no" column="NO"></result>
     <result property="name" column="NAME"></result>
@@ -13,7 +13,7 @@
   </resultMap>
 
   <!-- Create -->
-  <insert id="create" parameterType="xust.stu.demo.domain.Student">
+  <insert id="create" parameterType="xust.demo.stu.domain.Student">
     <![CDATA[insert into Student(Id,no,name,gender,age,dept) 
     values(#{id},#{no},#{name},#{gender},#{age},#{dept})]]>
   </insert>
@@ -60,7 +60,7 @@
   </select>
 
   <!-- Update according to id -->
-  <update id="update" parameterType="xust.stu.demo.domain.Student">
+  <update id="update" parameterType="xust.demo.stu.domain.Student">
     <![CDATA[update Student set no=#{no},name=#{name},gender=#{gender},age=#{age},dept=#{dept} where Id = #{id}]]>
   </update>
   

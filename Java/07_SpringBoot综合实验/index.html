@@ -169,7 +169,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../01_Html%E5%9F%BA%E7%A1%80/index.html">
 <span class="md-ellipsis">
-    Html基础实验
+    2.1 Html基础实验
     
   </span>
 </a>
@@ -185,7 +185,7 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../03_Javascript%E5%9F%BA%E7%A1%80/index.html">
 <span class="md-ellipsis">
-    2.3 Javascript基础
+    2.3 Javascript基础实验
     
   </span>
 </a>
@@ -625,7 +625,7 @@
 <p>打开STS4，选择File -&gt; New -&gt; Spring Starter Project</p>
 </li>
 <li>
-<p>输入项目名称，选择Maven项目，选择Spring Boot版本，选择Web、MySQL、MyBatis、Freemarker等依赖，点击Finish按钮创建项目</p>
+<p>输入项目参数；指定项目名称、选择Maven项目、选择Spring Boot版本、勾选Web、MySQL、MyBatis、Freemarker等依赖，点击Finish按钮创建项目</p>
 </li>
 <li>
 <p>打开<code>pom.xml</code>，手工添加以下依赖：</p>
@@ -1053,7 +1053,7 @@
 <h3 id="_2">创建学生表</h3>
 <ol>
 <li>
-<p>编写学生表定义及测试数据<code>SQL</code>代码，存放在<code>src/main/resources/sql</code></p>
+<p>编写学生表定义及测试数据SQL代码，存放在<code>src/main/resources/sql</code></p>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">stu_schema.sql</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -1072,33 +1072,15 @@
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">dept</span><span class="w"> </span><span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">stu_data.sql</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span>
-<span class="normal"><a href="#__codelineno-6-17">17</a></span>
-<span class="normal"><a href="#__codelineno-6-18">18</a></span>
-<span class="normal"><a href="#__codelineno-6-19">19</a></span>
-<span class="normal"><a href="#__codelineno-6-20">20</a></span>
-<span class="normal"><a href="#__codelineno-6-21">21</a></span>
-<span class="normal"><a href="#__codelineno-6-22">22</a></span>
-<span class="normal"><a href="#__codelineno-6-23">23</a></span>
-<span class="normal"><a href="#__codelineno-6-24">24</a></span>
-<span class="normal"><a href="#__codelineno-6-25">25</a></span>
-<span class="normal"><a href="#__codelineno-6-26">26</a></span>
-<span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">;</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">stu_data.sql</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span>
+<span class="normal"><a href="#__codelineno-6-8">8</a></span>
+<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">STUDENT</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X0'</span><span class="p">,</span><span class="s1">'X0'</span><span class="p">,</span><span class="s1">'X0'</span><span class="p">,</span><span class="s1">'X0'</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">'X0'</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
@@ -1107,32 +1089,14 @@
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X2'</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">'X2'</span><span class="p">);</span><span class="w"> </span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X3'</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">'X3'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X4'</span><span class="p">,</span><span class="s1">'X4'</span><span class="p">,</span><span class="s1">'X4'</span><span class="p">,</span><span class="s1">'X4'</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="s1">'X4'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X5'</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">'X5'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X6'</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="s1">'X6'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X7'</span><span class="p">,</span><span class="s1">'X7'</span><span class="p">,</span><span class="s1">'X7'</span><span class="p">,</span><span class="s1">'X7'</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="s1">'X7'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X8'</span><span class="p">,</span><span class="s1">'X8'</span><span class="p">,</span><span class="s1">'X8'</span><span class="p">,</span><span class="s1">'X8'</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="s1">'X8'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X9'</span><span class="p">,</span><span class="s1">'X9'</span><span class="p">,</span><span class="s1">'X9'</span><span class="p">,</span><span class="s1">'X9'</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s1">'X9'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X10'</span><span class="p">,</span><span class="s1">'X10'</span><span class="p">,</span><span class="s1">'X10'</span><span class="p">,</span><span class="s1">'X10'</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="s1">'X10'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X11'</span><span class="p">,</span><span class="s1">'X11'</span><span class="p">,</span><span class="s1">'X11'</span><span class="p">,</span><span class="s1">'X11'</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="s1">'X11'</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">STUDENT</span><span class="w"> </span><span class="p">(</span><span class="n">Id</span><span class="p">,</span><span class="k">no</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">gender</span><span class="p">,</span><span class="n">age</span><span class="p">,</span><span class="n">dept</span><span class="p">)</span><span class="w"> </span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="k">values</span><span class="w"> </span><span class="p">(</span><span class="s1">'X12'</span><span class="p">,</span><span class="s1">'X12'</span><span class="p">,</span><span class="s1">'X12'</span><span class="p">,</span><span class="s1">'X12'</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="s1">'X12'</span><span class="p">);</span><span class="w"> </span>
 </code></pre></div></td></tr></table></div>
 <blockquote>
 <p>前步配置中已设置自动执行这两个脚本</p>
 </blockquote>
 </li>
 <li>
-<p>在项目中创建<code>Student</code>实体类，包名为<code>xust.stu.demo.domain</code></p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Student类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">  1</a></span>
+<p>创建实体类：<code>xust.demo.stu.domain.Student</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">xust.demo.stu.domain.Student类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">  4</a></span>
@@ -1292,7 +1256,7 @@
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="cm"> * @author XUST</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="cm"> * Copyright 2023 XUST. All rights reserved.</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="cm"> */</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">package</span><span class="w"> </span><span class="n">xust</span><span class="p">.</span><span class="n">stu</span><span class="p">.</span><span class="n">demo</span><span class="p">.</span><span class="k">domain</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">package</span><span class="w"> </span><span class="n">xust</span><span class="p">.</span><span class="n">demo</span><span class="p">.</span><span class="n">stu</span><span class="p">.</span><span class="k">domain</span><span class="p">;</span>
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">import</span><span class="w"> </span><span class="n">javax</span><span class="p">.</span><span class="n">validation</span><span class="p">.</span><span class="k">constraints</span><span class="p">.</span><span class="n">DecimalMax</span><span class="p">;</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">import</span><span class="w"> </span><span class="n">javax</span><span class="p">.</span><span class="n">validation</span><span class="p">.</span><span class="k">constraints</span><span class="p">.</span><span class="n">DecimalMin</span><span class="p">;</span>
@@ -1447,8 +1411,8 @@
 <h3 id="crud">实现CRUD操作</h3>
 <ol>
 <li>
-<p>创建<code>StudentMapper</code>接口（包名：<code>xust.stu.demo.dao</code>），定义CRUD操作方法，参考代码如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentMapper接口</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<p>创建数据访问接口：<code>xust.demo.stu.dao.StudentMapper</code>，定义CRUD操作方法，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">xust.demo.stu.dao.StudentMapper接口</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -1530,13 +1494,13 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="cm"> * @author XUST</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="cm"> * Copyright 2023 XUST. All rights reserved.</span>
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="cm"> */</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.stu.demo.dao</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.demo.stu.dao</span><span class="p">;</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8"></a>
 <a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.ibatis.annotations.Mapper</span><span class="p">;</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.ibatis.annotations.Param</span><span class="p">;</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.Student</span><span class="p">;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.Student</span><span class="p">;</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a>
 <a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="cm">/**</span>
 <a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="cm"> * StudentDao</span>
@@ -1604,7 +1568,7 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>创建<code>StudentMapper.xml</code>文件（位置：<code>Stu/src/main/resources/mapper</code>），实现CRUD操作，参考代码如下：</p>
+<p>创建数据访问代码文件：<code>Stu/src/main/resources/mapper/StudentMapper.xml</code>文件，实现CRUD操作，参考代码如下： </p>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentMapper.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1694,9 +1658,9 @@
 <span class="normal"><a href="#__codelineno-9-87">87</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="cp">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" &gt;</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nt">&lt;mapper</span><span class="w"> </span><span class="na">namespace=</span><span class="s">"xust.stu.demo.dao.StudentDao"</span><span class="nt">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nt">&lt;mapper</span><span class="w"> </span><span class="na">namespace=</span><span class="s">"xust.demo.stu.dao.StudentDao"</span><span class="nt">&gt;</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nt">&lt;resultMap</span><span class="w"> </span><span class="na">type=</span><span class="s">"xust.stu.demo.domain.Student"</span><span class="w"> </span><span class="na">id=</span><span class="s">"studentResult"</span><span class="nt">&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nt">&lt;resultMap</span><span class="w"> </span><span class="na">type=</span><span class="s">"xust.demo.stu.domain.Student"</span><span class="w"> </span><span class="na">id=</span><span class="s">"studentResult"</span><span class="nt">&gt;</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="nt">&lt;result</span><span class="w"> </span><span class="na">property=</span><span class="s">"id"</span><span class="w"> </span><span class="na">column=</span><span class="s">"ID"</span><span class="nt">&gt;&lt;/result&gt;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="nt">&lt;result</span><span class="w"> </span><span class="na">property=</span><span class="s">"no"</span><span class="w"> </span><span class="na">column=</span><span class="s">"NO"</span><span class="nt">&gt;&lt;/result&gt;</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="nt">&lt;result</span><span class="w"> </span><span class="na">property=</span><span class="s">"name"</span><span class="w"> </span><span class="na">column=</span><span class="s">"NAME"</span><span class="nt">&gt;&lt;/result&gt;</span>
@@ -1706,7 +1670,7 @@
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">  </span><span class="nt">&lt;/resultMap&gt;</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">  </span><span class="cm">&lt;!-- Create --&gt;</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">  </span><span class="nt">&lt;insert</span><span class="w"> </span><span class="na">id=</span><span class="s">"create"</span><span class="w"> </span><span class="na">parameterType=</span><span class="s">"xust.stu.demo.domain.Student"</span><span class="nt">&gt;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">  </span><span class="nt">&lt;insert</span><span class="w"> </span><span class="na">id=</span><span class="s">"create"</span><span class="w"> </span><span class="na">parameterType=</span><span class="s">"xust.demo.stu.domain.Student"</span><span class="nt">&gt;</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">    </span><span class="cp">&lt;![CDATA[insert into Student(Id,no,name,gender,age,dept) </span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="cp">    values(#{id},#{no},#{name},#{gender},#{age},#{dept})]]&gt;</span>
 <a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">  </span><span class="nt">&lt;/insert&gt;</span>
@@ -1753,7 +1717,7 @@
 <a id="__codelineno-9-60" name="__codelineno-9-60"></a><span class="w">  </span><span class="nt">&lt;/select&gt;</span>
 <a id="__codelineno-9-61" name="__codelineno-9-61"></a>
 <a id="__codelineno-9-62" name="__codelineno-9-62"></a><span class="w">  </span><span class="cm">&lt;!-- Update according to id --&gt;</span>
-<a id="__codelineno-9-63" name="__codelineno-9-63"></a><span class="w">  </span><span class="nt">&lt;update</span><span class="w"> </span><span class="na">id=</span><span class="s">"update"</span><span class="w"> </span><span class="na">parameterType=</span><span class="s">"xust.stu.demo.domain.Student"</span><span class="nt">&gt;</span>
+<a id="__codelineno-9-63" name="__codelineno-9-63"></a><span class="w">  </span><span class="nt">&lt;update</span><span class="w"> </span><span class="na">id=</span><span class="s">"update"</span><span class="w"> </span><span class="na">parameterType=</span><span class="s">"xust.demo.stu.domain.Student"</span><span class="nt">&gt;</span>
 <a id="__codelineno-9-64" name="__codelineno-9-64"></a><span class="w">    </span><span class="cp">&lt;![CDATA[update Student set no=#{no},name=#{name},gender=#{gender},age=#{age},dept=#{dept} where Id = #{id}]]&gt;</span>
 <a id="__codelineno-9-65" name="__codelineno-9-65"></a><span class="w">  </span><span class="nt">&lt;/update&gt;</span>
 <a id="__codelineno-9-66" name="__codelineno-9-66"></a>
@@ -1781,8 +1745,8 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>创建<code>StudentService</code>接口和<code>StudentServiceImpl</code>实现类（包名：<code>xust.stu.demo.service</code>），实现CRUD操作，参考代码如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentService接口</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<p>创建服务接口：<code>xust.demo.stu.service.StudentService</code>接口和实现类：<code>xust.demo.stu.service.StudentServiceImpl</code>，实现CRUD操作，参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">xust.demo.stu.service.StudentService接口</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -1862,14 +1826,14 @@
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="cm"> * @author XUST</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="cm"> * Copyright 2023 XUST. All rights reserved.</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="cm"> */</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.stu.demo.service</span><span class="p">;</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.demo.stu.service</span><span class="p">;</span>
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
 <a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.Result</span><span class="p">;</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.Student</span><span class="p">;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.Student</span><span class="p">;</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15"></a>
 <a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="cm">/**</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="cm"> * Interface StudentService</span>
@@ -1932,7 +1896,7 @@
 <a id="__codelineno-10-74" name="__codelineno-10-74"></a>
 <a id="__codelineno-10-75" name="__codelineno-10-75"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentServiceImpl实现类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">  1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">xust.demo.stu.service.StudentServiceImpl实现类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-11-4">  4</a></span>
@@ -2162,7 +2126,7 @@
 <span class="normal"><a href="#__codelineno-11-228">228</a></span>
 <span class="normal"><a href="#__codelineno-11-229">229</a></span>
 <span class="normal"><a href="#__codelineno-11-230">230</a></span>
-<span class="normal"><a href="#__codelineno-11-231">231</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.stu.demo.service</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-11-231">231</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.demo.stu.service</span><span class="p">;</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.OutputStream</span><span class="p">;</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
@@ -2182,8 +2146,8 @@
 <a id="__codelineno-11-18" name="__codelineno-11-18"></a>
 <a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.Result</span><span class="p">;</span>
 <a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.ErrEnum</span><span class="p">;</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.dao.StudentDao</span><span class="p">;</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.Student</span><span class="p">;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.dao.StudentDao</span><span class="p">;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.Student</span><span class="p">;</span>
 <a id="__codelineno-11-23" name="__codelineno-11-23"></a>
 <a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="cm">/**</span>
 <a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="cm"> * Class StudentServiceImpl</span>
@@ -2396,8 +2360,8 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>创建<code>StudentController</code>，实现学生表CRUD操作Web Api（包名：<code>xust.stu.demo.controller</code>），参考代码如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">StudentController类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">  1</a></span>
+<p>创建控制类：<code>StudentController</code>，实现学生表CRUD操作Web Api（包名：<code>xust.demo.stu.controller</code>），参考代码如下：</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">xust.demo.stu.controller.StudentController类</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-12-4">  4</a></span>
@@ -2560,7 +2524,7 @@
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="cm"> * File name : StudentController.java 2023-04-20</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="cm"> * Copyright 2023 XUST. All rights reserved.</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="cm"> */</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.stu.demo.controller</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kn">package</span><span class="w"> </span><span class="nn">xust.demo.stu.controller</span><span class="p">;</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6"></a>
 <a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
@@ -2584,10 +2548,10 @@
 <a id="__codelineno-12-26" name="__codelineno-12-26"></a>
 <a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.Result</span><span class="p">;</span>
 <a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.Result4GetPage</span><span class="p">;</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.DeleteItems4Student</span><span class="p">;</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.GetPage4Student</span><span class="p">;</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.domain.Student</span><span class="p">;</span>
-<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.stu.demo.service.StudentServiceImpl</span><span class="p">;</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.DeleteItems4Student</span><span class="p">;</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.GetPage4Student</span><span class="p">;</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.domain.Student</span><span class="p">;</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="kn">import</span><span class="w"> </span><span class="nn">xust.demo.stu.service.StudentServiceImpl</span><span class="p">;</span>
 <a id="__codelineno-12-33" name="__codelineno-12-33"></a>
 <a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.TreeMap</span><span class="p">;</span>
 <a id="__codelineno-12-35" name="__codelineno-12-35"></a>
@@ -2725,7 +2689,7 @@
 <p>在Spring Boot Dashbord启动Stu工程</p>
 </li>
 <li>
-<p>使用<strong>REST Client</strong>编写学生表CRUD测试代码，参考代码如下：</p>
+<p>使用CRUD测试代码：<code>Stu/api_test.http</code>（Rest Client代码），参考代码如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">Stu/api_test.http</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -2816,7 +2780,7 @@
 <p><code>Stu/api.md</code>中包含各Web Api的使用说明，可据此检查返</p>
 <h4 id="_4">学生表</h4>
 <h5 id="_5">学生表增</h5>
-<p><strong>调用地址：</strong> <a href="http://my_host:8080/Stu/demo/Student/add">http://my_host:8080/Stu/demo/Student/add</a></p>
+<p><strong>调用地址：</strong> <a href="http://my_host:8080/Demo/stu/Student/add">http://my_host:8080/Demo/stu/Student/add</a></p>
 <p><strong>请求方式：</strong> POST</p>
 <p><strong>返回类型：</strong> JSON</p>
 <p><strong>请求参数（Headers）</strong></p>
@@ -2846,7 +2810,7 @@
 <a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>请求示例</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Stu/demo/Student/add HTTP/1.1</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Demo/stu/Student/add HTTP/1.1</span>
 <a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="err">co</span><span class="kc">ntent</span><span class="mi">-</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
 <a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>
 <a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">{</span>
@@ -2895,7 +2859,7 @@
 </tbody>
 </table>
 <h5 id="_6">学生表删</h5>
-<p><strong>调用地址：</strong> <a href="http://my_host:8080/Stu/demo/Student/delete">http://my_host:8080/Stu/demo/Student/delete</a></p>
+<p><strong>调用地址：</strong> <a href="http://my_host:8080/Demo/stu/Student/delete">http://my_host:8080/Demo/stu/Student/delete</a></p>
 <p><strong>请求方式：</strong> POST</p>
 <p><strong>返回类型：</strong> JSON</p>
 <p><strong>请求参数（Headers）</strong></p>
@@ -2918,7 +2882,7 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="p">[</span><span class="s2">"id1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"id2"</span><span class="p">]</span>
 </code></pre></div>
 <p><strong>请求示例</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Stu/demo/Student/delete HTTP/1.1</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Demo/stu/Student/delete HTTP/1.1</span>
 <a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="err">co</span><span class="kc">ntent</span><span class="mi">-</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
 <a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a>
 <a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="p">[</span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2"</span><span class="p">]</span>
@@ -2960,7 +2924,7 @@
 </tbody>
 </table>
 <h5 id="_7">学生表改</h5>
-<p><strong>调用地址：</strong> <a href="http://my_host:8080/Stu/demo/Student/update">http://my_host:8080/Stu/demo/Student/update</a></p>
+<p><strong>调用地址：</strong> <a href="http://my_host:8080/Demo/stu/Student/update">http://my_host:8080/Demo/stu/Student/update</a></p>
 <p><strong>请求方式：</strong> POST</p>
 <p><strong>返回类型：</strong> JSON</p>
 <p><strong>请求参数（Headers）</strong></p>
@@ -2990,7 +2954,7 @@
 <a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>请求示例</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Stu/demo/Student/update HTTP/1.1</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Demo/stu/Student/update HTTP/1.1</span>
 <a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="err">co</span><span class="kc">ntent</span><span class="mi">-</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
 <a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>
 <a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="p">{</span>
@@ -3039,7 +3003,7 @@
 </tbody>
 </table>
 <h5 id="_8">学生表查</h5>
-<p><strong>调用地址：</strong> <a href="http://my_host:8080/Stu/demo/Student/getPage">http://my_host:8080/Stu/demo/Student/getPage</a></p>
+<p><strong>调用地址：</strong> <a href="http://my_host:8080/Demo/stu/Student/getPage">http://my_host:8080/Demo/stu/Student/getPage</a></p>
 <p><strong>请求方式：</strong> POST</p>
 <p><strong>返回类型：</strong> JSON</p>
 <p><strong>请求参数（Headers）</strong></p>
@@ -3065,7 +3029,7 @@
 <a href="#__codelineno-26-4" id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>请求示例</strong></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Stu/demo/Student/getPage HTTP/1.1</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="err">POST</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//localhost:8080/Demo/stu/Student/getPage HTTP/1.1</span>
 <a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="err">co</span><span class="kc">ntent</span><span class="mi">-</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">applica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">/jso</span><span class="kc">n</span>
 <a href="#__codelineno-27-3" id="__codelineno-27-3" name="__codelineno-27-3"></a>
 <a href="#__codelineno-27-4" id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="p">{</span>
@@ -3131,7 +3095,7 @@
 </li>
 <li>
 <p>创建<code>list-jquery.f</code>文件，用于显示学生表，参考代码如下：</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">list-jquery.f</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">  1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">list-jquery.f</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-30-3">  3</a></span>
 <span class="normal"><a href="#__codelineno-30-4">  4</a></span>
@@ -4033,7 +3997,9 @@
 <a id="__codelineno-30-450" name="__codelineno-30-450"></a>
 <a id="__codelineno-30-451" name="__codelineno-30-451"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
-3. 在浏览器中打开<code>http://localhost:8080/demo/Student/list-jquery</code></p>
+</li>
+<li>
+<p>在浏览器中打开<code>http://localhost:8080/demo/Student/list-jquery</code></p>
 </li>
 </ol>
 <h3 id="bootstrap">基于Bootstrap的界面</h3>

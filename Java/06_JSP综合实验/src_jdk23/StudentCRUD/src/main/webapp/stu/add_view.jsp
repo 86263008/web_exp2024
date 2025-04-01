@@ -10,7 +10,7 @@
 <body>
   <h3>学生表</h3>
   <div>
-    <form action="<%=String.format("%s/stu/add.jsp", request.getContextPath())%>">
+    <form action="<%=String.format(" %s/stu/add.jsp", request.getContextPath())%>">
       <div>
         <label for="no">学号:</label>
         <input type="text" id="no" name="no" placeholder="请输入学号..">
@@ -37,4 +37,3 @@
 </body>
 
 </html>
-
