@@ -1,6 +1,6 @@
 
 
--- --8<-- [start:student]
+-- -8<- [start:student]
 drop table if exists STUDENT;
 create table STUDENT(
 	Id varchar(200) primary key,
@@ -10,10 +10,10 @@ create table STUDENT(
 	age int,
 	dept varchar(20)
 );
--- --8<-- [end:student]
+-- -8<- [end:student]
 
 
--- --8<-- [start:course]
+-- -8<- [start:course]
 drop table if exists COURSE;
 create table COURSE(
 	Id varchar(200) primary key,
@@ -22,10 +22,10 @@ create table COURSE(
 	PreNo varchar(20),
 	credit numeric(10,      1)
 );
--- --8<-- [end:course]
+-- -8<- [end:course]
 
 
--- --8<-- [start:stucourse]
+-- -8<- [start:stucourse]
 drop table if exists STUCOURSE;
 create table STUCOURSE(
 	Id varchar(200) primary key,
@@ -33,4 +33,4 @@ create table STUCOURSE(
 	StuNo varchar(20) not null,
 	Grade numeric(10,1)
 );
--- --8<-- [end:stucourse]
+-- -8<- [end:stucourse]
