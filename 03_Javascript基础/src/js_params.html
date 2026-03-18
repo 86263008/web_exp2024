@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四种请求方式示例</title>
+</head>
+<body>
+    <h1>四种请求方式示例</h1>
+     
+    <!-- 超链接请求方式 -->
+    <div>
+        <h2>超链接请求</h2>
+        <a href="http://localhost:8080/hi?name=World" target="_blank">点击这里发送超链接请求 (固定参数: name=World)</a>
+    </div>
+   
+    <!-- GET请求方式 -->
+    <div>
+        <h2>GET请求</h2>
+        <form action="http://localhost:8080/hi" method="get">
+            姓名: <input type="text" name="name" required>
+            <button type="submit">发送GET请求</button>
+        </form>
+    </div>
+    
+    <br>
+    
+    <!-- POST请求方式 -->
+    <div>
+        <h2>POST请求</h2>
+        <form action="http://localhost:8080/hi" method="post">
+            姓名: <input type="text" name="name" required>
+            <button type="submit">发送POST请求</button>
+        </form>
+    </div>
+    
+    <br>
+    
+    <!-- AJAX请求方式 -->
+    <div>
+        <h2>AJAX请求</h2>
+        姓名: <input type="text" id="ajax-name" required>
+        <button onclick="sendAjaxRequest()">发送AJAX请求</button>
+        <div id="ajax-response"></div>
+    </div>
+    
+    <br>
+    
+    <script>
+        function sendAjaxRequest() {
+            const name = document.getElementById('ajax-name').value;
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', `http://localhost:8080/hi?name=${encodeURIComponent(name)}`, true);
+            
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('ajax-response').innerHTML = '响应: ' + xhr.responseText;
+                } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                    document.getElementById('ajax-response').innerHTML = '错误: ' + xhr.statusText;
+                }
+            };
+            
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
