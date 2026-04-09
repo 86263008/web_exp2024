@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.4" name="generator"/>
-<title>服务端开发环境搭建 - 基于WEB的应用程序开发-实验指导书</title>
+<title>Index 1 - 基于WEB的应用程序开发-实验指导书</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,9 +21,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
-          Skip to content
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -45,7 +42,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              服务端开发环境搭建
+              Index 1
             
           </span>
 </div>
@@ -231,7 +228,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="index.html">
+<a class="md-nav__link" href="../05_%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <span class="md-ellipsis">
     
   
@@ -417,7 +414,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06_Servlet%E5%8F%8AFilter%E5%9F%BA%E7%A1%80%E5%AE%9E%E9%AA%8C/index.html">
+<a class="md-nav__link" href="index.html">
 <span class="md-ellipsis">
     
   
@@ -464,253 +461,49 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label=" " class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-</label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
-<span class="md-ellipsis">
-      
-        1 实验类型
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2">
-<span class="md-ellipsis">
-      
-        2 实验目的
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3">
-<span class="md-ellipsis">
-      
-        3 实验要求
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4">
-<span class="md-ellipsis">
-      
-        4 实验环境
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5">
-<span class="md-ellipsis">
-      
-        5 实验步骤
-      
-    </span>
-</a>
-<nav aria-label="5 实验步骤" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jdk">
-<span class="md-ellipsis">
-      
-        安装JDK
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tomcat">
-<span class="md-ellipsis">
-      
-        安装Tomcat
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sts-4">
-<span class="md-ellipsis">
-      
-        安装STS 4
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jsp">
-<span class="md-ellipsis">
-      
-        创建JSP测试工程
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">服务端开发环境搭建</h1>
-<h2 id="1">1 实验类型</h2>
-<p>验证型，2学时，必选实验</p>
-<h2 id="2">2 实验目的</h2>
-<p>掌握JSP运行环境的安装与配置；掌握STS4中Tomcat注册过程；掌握JSP页面的部署及调试过程</p>
-<h2 id="3">3 实验要求</h2>
-<p>完成各实验步骤并对关键结果截图</p>
-<h2 id="4">4 实验环境</h2>
-<p>Windows 7 64，JDK 8u311，Tomcat 9.0.54，STS4，<code>Microsoft Edge/Chrome/Firefox</code>等浏览器</p>
-<p>Windows 7 64，Open JDK 23+，Tomcat 9.0.54，STS4，<code>Microsoft Edge/Chrome/Firefox</code>等浏览器</p>
-<h2 id="5">5 实验步骤</h2>
-<h3 id="jdk">安装JDK</h3>
-<p>为服务器安装Java运行环境，JDK使用比较成熟的版本（<a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html</a>），步骤如下：</p>
-<ol>
-<li>
-<p>按默认配置安装<code>jdk-8u311-windows-x64.exe</code></p>
-</li>
-<li>
-<p>为Java增加<code>环境变量</code>；在<code>开始/设置/控制面板/系统/高级/环境变量/系统变量</code>中新建两个环境变量：</p>
-<blockquote>
-<p><strong>JAVA_HOME</strong>:{JAVA_HOME}</p>
-<p><strong>JRE_HOME</strong>:{JAVA_HOME}\jre</p>
-</blockquote>
-</li>
-<li>
-<p>将<code>JAVA_HOME</code>添加到<code>Path</code>变量</p>
-</li>
-<li>
-<p>确认Java安装成功，进入cmd命令行运行如下命令查看<code>Java版本号</code>：</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>java<span class="w"> </span>–version
-</code></pre></div>
-<h3 id="tomcat">安装Tomcat</h3>
-<p>安装Tomcat服务器。在官网（<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a>）下载安装包。Windows下有两种方式：安装包、压缩包，本实验选择压缩包，步骤如下：</p>
-<ol>
-<li>
-<p>安装（解压）<code>apache-tomcat-9.0.71-windows-x64.zip</code>到目录<code>C:/App/Tomcat 9.0</code></p>
-<blockquote>
-<p>注意端口号为:8080</p>
-</blockquote>
-</li>
-<li>
-<p>在控制台（推荐Vscode终端）运行<code>bin/startup.bat</code>启动Tomcat</p>
-</li>
-<li>
-<p>打开<code>浏览器</code>访问<code>http://localhost:8080</code>，确认<code>Tomcat首页</code>是否能正常显示</p>
-</li>
-</ol>
-<h3 id="sts-4">安装STS 4</h3>
-<p>安装集成开发环境STS4，在官网（<a href="https://spring.io/tools">https://spring.io/tools</a>）下载适合本地电脑的版本，以Spring Tools 4 for Eclipse Windows X86_64为例，具体步骤如下：</p>
-<ol>
-<li>
-<p>安装（解压）<code>sts-4.17.2.RELEASE.zip</code>到目录<code>C:/App/Sts4</code></p>
-</li>
-<li>
-<p>启动<code>SpringToolSuite4.exe</code>，确认软件能正常运行</p>
-</li>
-<li>
-<p>打开菜单<code>Help/Install New Software...</code>，在<strong>Work with</strong>:输入<code>Juno - http://download.eclipse.org/releases/juno</code>，在下方组件中选择<strong>Web, XML, Java EE and OSGi Enterprise Development</strong>，并在下一级组件中勾选以下组件：</p>
-<ol class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Eclipse Java EE Developer Tools</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Eclipse Java Web Developer Tools</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Eclipse Web Developer Tools</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Eclipse XML Editors and Tools</li>
-</ol>
-</li>
-</ol>
-<h3 id="jsp">创建JSP测试工程</h3>
-<p>创建一个JSP工程，在页面中使用Java代码输出问候字符串，步骤如下：</p>
-<ol>
-<li>
-<p>创建工作目录：<code>C:/{学号}</code></p>
-<blockquote>
-<p>后续文件均存放在工作目录</p>
-</blockquote>
-</li>
-<li>
-<p>启动<strong>STS4</strong>（Workspace指向工作目录），创建名为<code>HelloJsp</code>的Web工程（<code>File/New/Project/Web/Dynamic Web</code>），向导过程中修改配置如下：</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Project Name</td>
-<td>HelloJsp</td>
-</tr>
-<tr>
-<td>Generate web.xml deployment descriptor</td>
-<td>选中</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>注册<code>Tocmat服务器</code>；在<strong>Servers视图</strong>（默认<strong>在STS4界面下方</strong>，也可通过菜单<code>Window/Show View/Servers</code>打开）添加<code>Apache/Tomcat 9</code></p>
-<blockquote>
-<p>关键设置：1. 指定<strong>Tomcat 9安装目录</strong>；2. JRE选择<strong>jre</strong></p>
-</blockquote>
-</li>
-<li>
-<p>配置<code>服务器运行时</code>，在工程的快捷菜单中选择<code>Build Path/Configure Build Path.../Libraries/Class Path/Add Library/Server Runtime/Apache Tomcat 9.0</code></p>
-</li>
-<li>
-<p>创建<code>webapp/index.jsp</code>，参考代码如下：</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">HelloJsp/src/main/webapp/index.jsp</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="err">&lt;</span>%@ page language="java" contentType="text/html; charset=utf-8" 
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>  import="java.util.*" pageEncoding="utf-8"%&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"utf-8"</span><span class="p">&gt;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello JSP<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="err">&lt;</span>%
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>  Date now = new Date();
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>  out.print("Hello Jsp:" + now);
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>%&gt;
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></td></tr></table></div>
-</li>
-<li>
-<p>启动工程；在工程快捷菜单中运行<code>Run As/Run On Server</code>将工程部署到Tomcat并启动</p>
-</li>
-<li>
-<p>在浏览器中访问<code>http://localhost:8080/HelloJsp/index.jsp</code>，确认部署成功</p>
-</li>
-</ol>
-<details class="tip">
-<summary>运行结果</summary>
-<p><iframe frameborder="0" height="50" src="./src/HelloJspResult/index.jsp.html" width="100%"></iframe></p>
-</details>
+<h1>Index 1</h1>
+<div class="mermaid">
+graph LR
+    classDef iosCard fill:#F2F7FF,stroke:#E0E7FF,stroke-width:1px,rx:12,ry:12,font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,sans-serif,font-size:14px,color:#1D1D1F;
+    classDef iosDatabase fill:#F2F7FF,stroke:#E0E7FF,stroke-width:1px,rx:12,ry:12,font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,sans-serif,font-size:14px,color:#1D1D1F;
+    classDef iosSubgraph fill:#FFFFFF,stroke:#E5E5EA,stroke-width:1px,rx:16,ry:16,font-family:'SF Pro Display',-apple-system,BlinkMacSystemFont,sans-serif,font-size:15px,color:#1D1D1F;
+
+    subgraph "表现层 (Action)"
+        A(JSP页面):::iosCard
+    end
+
+    subgraph "业务逻辑层 (Service)"
+        B(StudentService):::iosCard
+    end
+
+    subgraph "数据访问层 (DAO)"
+        C(StudentDAO):::iosCard
+    end
+
+    subgraph "实体层 (Domain)"
+        D(Student):::iosCard
+    end
+
+    E[(学生表)]:::iosDatabase
+
+    A --&gt;|调用业务方法| B
+    B --&gt;|调用数据访问方法| C
+    C --&gt;|操作实体| D
+    C --&gt;|CRUD 操作| E
+
+    class "表现层 (Action)" "业务逻辑层 (Service)" "数据访问层 (DAO)" "实体层 (Domain)" iosSubgraph
+
+    linkStyle 0 stroke:#8E8E93,stroke-width:2px,fill:none
+    linkStyle 1 stroke:#8E8E93,stroke-width:2px,fill:none
+    linkStyle 2 stroke:#8E8E93,stroke-width:2px,fill:none
+    linkStyle 3 stroke:#8E8E93,stroke-width:2px,fill:none
+</div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
@@ -743,5 +536,5 @@
 <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
 <script src="../../js/mermaid.min.js"></script>
 <script src="../../js/init_mermaid.js"></script>
-</body>
+<script>mermaid.initialize({});</script></body>
 </html>
