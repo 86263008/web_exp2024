@@ -23,7 +23,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#servletfilter">
+<a class="md-skip" href="#jsp">
           Skip to content
         </a>
 </div>
@@ -508,34 +508,34 @@
 <nav aria-label="5 实验步骤" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#51">
 <span class="md-ellipsis">
       
-        后端
+        5.1 后端
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#52">
 <span class="md-ellipsis">
       
-        前端
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        拓展练习
+        5.2 前端
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6 拓展练习
+      
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -612,34 +612,34 @@
 <nav aria-label="5 实验步骤" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+<a class="md-nav__link" href="#51">
 <span class="md-ellipsis">
       
-        后端
+        5.1 后端
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+<a class="md-nav__link" href="#52">
 <span class="md-ellipsis">
       
-        前端
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-<span class="md-ellipsis">
-      
-        拓展练习
+        5.2 前端
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6">
+<span class="md-ellipsis">
+      
+        6 拓展练习
+      
+    </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -648,48 +648,54 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="servletfilter">Servlet及Filter基础实验</h1>
+<h1 id="jsp">JSP综合实验</h1>
 <h2 id="1">1 实验类型</h2>
 <p>验证型，2学时，必选实验</p>
 <h2 id="2">2 实验目的</h2>
-<p>掌握前后端协作过程；理解前后端数据交换原理；</p>
+<p>熟悉前后端协作过程；理解前后端数据交换原理；掌握用JSP实现CRUD操作；</p>
 <h2 id="3">3 实验要求</h2>
 <p>验证参考代码；修改参考代码，实现自己的设计；将关键结果截图及源代码整理成实验报告</p>
 <h2 id="4">4 实验环境</h2>
-<p>Windows 7 64、Open JDK 23+、Tomcat 11+、Spring Tools 4(STS4)、Visual Studio Code(VS Code)、Microsoft Edge/Chrome/Firefox等浏览器
-、sqlite-jdbc-3.41.0.0.jar</p>
+<p>Windows 7+、Open JDK 23+、Tomcat 11+、Spring Tools 5(STS5)、Visual Studio Code(VS Code)、Microsoft Edge/Chrome/Firefox等浏览器、sqlite-jdbc-3.41.0.0.jar</p>
 <h2 id="5">5 实验步骤</h2>
 <p>创建工作目录：<code>{盘符}:/{学号}/exp5_advanced</code></p>
-<p>用JSP实现学生表的增、删、改、查操作，前端：用JSP页面编写操作界面，后端：用4层架构通过JDBC存储数据于Sqlite数据库</p>
-<h4 id="_1">后端</h4>
+<p>用JSP实现学生表的增、删、改、查操作，前端：用JSP页面编写操作界面，后端：用4层架构通过JDBC存储数据于<strong>Sqlite</strong>数据库</p>
+<h4 id="51">5.1 后端</h4>
 <p>后端4层架构如下：</p>
 <div class="mermaid">
 graph LR
-    classDef process fill:#E5F6FF,stroke:#73A6FF,stroke-width:2px;
-
-    subgraph "表现层 (Action)"
-        A(JSP页面):::process
+    subgraph L1 ["表现层 (Action)"]
+        A(JSP页面)
     end
 
-    subgraph "业务逻辑层 (Service)"
-        B(StudentService):::process
+    subgraph L2 ["业务逻辑层 (Service)"]
+        B(StudentService)
     end
 
-    subgraph "数据访问层 (DAO)"
-        C(StudentDAO):::process
+    subgraph L3 ["数据访问层 (DAO)"]
+        C(StudentDAO)
     end
 
-    subgraph "实体层 (Domain)"
-        D(Student):::process
+    subgraph L4 ["实体层 (Domain)"]
+        D(Student)
     end
 
     A --&gt;|调用业务方法| B
     B --&gt;|调用数据访问方法| C
     C --&gt;|操作实体| D
 
-    classDef database fill:#FFEBEB,stroke:#E68994,stroke-width:2px;
-    E[(学生表)]:::database
-    C --&gt;|CRUD 操作| E      
+    E[(学生表)]
+    C --&gt;|CRUD 操作| E
+
+    %% iOS 16风格
+    classDef ios16Node fill:#f8f9fa,stroke:#007aff,stroke-width:1.5px,rx:12px,ry:12px,font-family:'SF Pro Display', -apple-system, sans-serif,font-size:14px,font-weight:500,opacity:0.95;
+    classDef ios16Database fill:#f0f8ff,stroke:#34aadc,stroke-width:1.5px,rx:12px,ry:12px,font-family:'SF Pro Display', -apple-system, sans-serif,font-size:14px,font-weight:500,opacity:0.95;
+    classDef ios16Subgraph fill:#f2f7ff,stroke:#007aff,stroke-width:1px,rx:16px,ry:16px,font-family:'SF Pro Display', -apple-system, sans-serif,font-size:15px,font-weight:600,opacity:0.9;
+
+    %% 类指派
+    class A,B,C,D ios16Node;
+    class E ios16Database;
+    class L1,L2,L3,L4 ios16Subgraph;
 </div>
 <ol>
 <li>
@@ -1990,7 +1996,7 @@ graph LR
 </code></pre></div></td></tr></table></div>
 </li>
 </ol>
-<h4 id="_2">前端</h4>
+<h4 id="52">5.2 前端</h4>
 <p>前端主要页面功能如下：</p>
 <table>
 <thead>
@@ -2492,7 +2498,7 @@ sequenceDiagram
 <p>测试全部功能</p>
 </li>
 </ol>
-<h3 id="_3">拓展练习</h3>
+<h2 id="6">6 拓展练习</h2>
 <ol>
 <li>使用JSP实现课程表的增、删、改、查操作</li>
 </ol>
